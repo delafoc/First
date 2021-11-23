@@ -1,7 +1,8 @@
 package com.jiawa.wiki.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController // 用于返回字符串，@RestController等于@Controller加上@ResponseBody
@@ -27,5 +28,10 @@ public class TestController {
     @GetMapping("/hello")
     public String hello() {
         return "Hello World!";
+    }
+
+    @PostMapping("/hello/Post")
+    public String helloPost(String name) {
+        return "Hello World!" + name;
     }
 }

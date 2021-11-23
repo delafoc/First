@@ -1,0 +1,21 @@
+
+GET http://localhost:8085/hello
+#Accept: application/json
+
+> {%
+client.test("test-hello", function() {
+  client.log("测试/hello接口");
+  client.log(response.body);
+  client.log(JSON.stringify(response.body)); // 虽然idea没有提示JSON，但是可以用
+  client.assert(response.status === 200, "返回码不是200"); //
+  client.assert(response.body === "Hello World!", "结果验证失败");
+});
+%}
+###
+
+POST http://localhost:8085/hello/Post
+Content-Type: application/x-www-form-urlencoded
+
+name=TEST  // 注意： name与TEST之间的等于号之间不能有空格
+
+###
