@@ -22,3 +22,42 @@
 2021-11-23 17:25:47.258 INFO  com.jiawa.wiki.WikiApplication                    :61   [32m                  [0;39m Started WikiApplication in 1.094 seconds (JVM running for 1.504)
 2021-11-23 17:25:47.260 INFO  com.jiawa.wiki.WikiApplication                    :18   [32m                  [0;39m 启动成功！！
 2021-11-23 17:25:47.261 INFO  com.jiawa.wiki.WikiApplication                    :19   [32m                  [0;39m 地址：、thttp：//127.0.0.1:8880
+2021-11-23 17:26:32.211 INFO  com.jiawa.wiki.WikiApplication                    :55   [32m                  [0;39m Starting WikiApplication using Java 17.0.1 on DESKTOP-8V065KT with PID 19032 (E:\程序\Java\wiki\wiki\target\classes started by Undefeated604 in E:\程序\Java\wiki\wiki)
+2021-11-23 17:26:32.213 INFO  com.jiawa.wiki.WikiApplication                    :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-11-23 17:26:32.742 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2021-11-23 17:26:32.748 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2021-11-23 17:26:32.748 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-11-23 17:26:32.749 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-23 17:26:32.793 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-11-23 17:26:32.794 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 537 ms
+2021-11-23 17:26:32.970 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2021-11-23 17:26:33.006 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2021-11-23 17:26:33.013 INFO  com.jiawa.wiki.WikiApplication                    :61   [32m                  [0;39m Started WikiApplication in 1.095 seconds (JVM running for 1.505)
+2021-11-23 17:26:33.015 INFO  com.jiawa.wiki.WikiApplication                    :18   [32m                  [0;39m 启动成功！！
+2021-11-23 17:26:33.016 INFO  com.jiawa.wiki.WikiApplication                    :19   [32m                  [0;39m 地址：	http：//127.0.0.1:8880
+2021-11-23 17:31:57.230 INFO  com.jiawa.wiki.WikiApplication                    :55   [32m                  [0;39m Starting WikiApplication using Java 17.0.1 on DESKTOP-8V065KT with PID 12976 (E:\程序\Java\wiki\wiki\target\classes started by Undefeated604 in E:\程序\Java\wiki\wiki)
+2021-11-23 17:31:57.232 INFO  com.jiawa.wiki.WikiApplication                    :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-11-23 17:31:57.759 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2021-11-23 17:31:57.764 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2021-11-23 17:31:57.764 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-11-23 17:31:57.765 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-23 17:31:57.811 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-11-23 17:31:57.812 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 535 ms
+2021-11-23 17:31:57.992 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2021-11-23 17:31:58.025 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2021-11-23 17:31:58.032 INFO  com.jiawa.wiki.WikiApplication                    :61   [32m                  [0;39m Started WikiApplication in 1.102 seconds (JVM running for 1.524)
+2021-11-23 17:31:58.035 INFO  com.jiawa.wiki.WikiApplication                    :18   [32m                  [0;39m 启动成功！！
+2021-11-23 17:31:58.036 INFO  com.jiawa.wiki.WikiApplication                    :19   [32m                  [0;39m 地址：	http：//127.0.0.1:8880
+2021-11-23 17:37:37.356 INFO  com.jiawa.wiki.WikiApplication                    :55   [32m                  [0;39m Starting WikiApplication using Java 17.0.1 on DESKTOP-8V065KT with PID 2564 (E:\程序\Java\wiki\wiki\target\classes started by Undefeated604 in E:\程序\Java\wiki\wiki)
+2021-11-23 17:37:37.358 INFO  com.jiawa.wiki.WikiApplication                    :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-11-23 17:37:37.885 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2021-11-23 17:37:37.890 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2021-11-23 17:37:37.890 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-11-23 17:37:37.891 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-23 17:37:37.934 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-11-23 17:37:37.935 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 530 ms
+2021-11-23 17:37:38.127 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2021-11-23 17:37:38.158 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2021-11-23 17:37:38.165 INFO  com.jiawa.wiki.WikiApplication                    :61   [32m                  [0;39m Started WikiApplication in 1.108 seconds (JVM running for 1.515)
+2021-11-23 17:37:38.167 INFO  com.jiawa.wiki.WikiApplication                    :18   [32m                  [0;39m 启动成功！！
+2021-11-23 17:37:38.167 INFO  com.jiawa.wiki.WikiApplication                    :19   [32m                  [0;39m 地址：	http：//127.0.0.1:8880
