@@ -1,9 +1,14 @@
 package com.jiawa.wiki.controller;
 
+import com.jiawa.wiki.domain.Test;
+import com.jiawa.wiki.service.TestService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
+import java.util.List;
 
 
 @RestController // 用于返回字符串，@RestController等于@Controller加上@ResponseBody
@@ -12,6 +17,9 @@ public class TestController {
 
     @Value("${test.hello:TEST}")
     private  String testHello;
+
+    @Resource
+    private TestService testService;
 
     //http：//127.0.0.1:8085/hello
 
@@ -37,5 +45,11 @@ public class TestController {
     @PostMapping("/hello/Post")
     public String helloPost(String name) {
         return "Hello World!" + name;
+    }
+
+
+    @GetMapping("/test/List")
+    public List<Test> list() {
+        return testService.list();
     }
 }

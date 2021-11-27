@@ -19,3 +19,9 @@ Content-Type: application/x-www-form-urlencoded
 name=TEST  // 注意： name与TEST之间的等于号之间不能有空格
 
 ###
+
+
+GET http://localhost:8085/test/List
+Accept: application/json
+
+###
