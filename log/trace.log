@@ -56,3 +56,158 @@
 2021-11-28 11:48:40.501 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
 2021-11-28 11:48:40.501 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-2 - Starting...
 2021-11-28 11:48:40.518 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-2 - Start completed.
+2021-11-28 12:47:41.021 WARN  com.zaxxer.hikari.pool.HikariPool                 :788  [32m                  [0;39m HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=33m59s934ms750µs500ns).
+2021-11-28 13:23:30.298 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-2 - Shutdown initiated...
+2021-11-28 13:23:30.303 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-2 - Shutdown completed.
+2021-11-28 13:23:30.366 INFO  com.jiawa.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 17.0.1 on DESKTOP-8V065KT with PID 9624 (E:\程序\Java\wiki\wiki\target\classes started by Undefeated604 in E:\程序\Java\wiki\wiki)
+2021-11-28 13:23:30.366 INFO  com.jiawa.wiki.config.WikiApplication             :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-11-28 13:23:30.505 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8085 (http)
+2021-11-28 13:23:30.506 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8085"]
+2021-11-28 13:23:30.506 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-11-28 13:23:30.506 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-28 13:23:30.518 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-11-28 13:23:30.518 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 150 ms
+2021-11-28 13:23:30.632 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-11-28 13:23:30.638 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8085"]
+2021-11-28 13:23:30.640 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8085 (http) with context path ''
+2021-11-28 13:23:30.643 INFO  com.jiawa.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.301 seconds (JVM running for 7788.691)
+2021-11-28 13:23:30.644 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-11-28 13:23:30.645 INFO  com.jiawa.wiki.config.WikiApplication             :26   [32m                  [0;39m 启动成功！！
+2021-11-28 13:23:30.645 INFO  com.jiawa.wiki.config.WikiApplication             :27   [32m                  [0;39m 地址：	http：//127.0.0.1:8085
+2021-11-28 13:23:31.329 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-28 13:23:31.329 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-11-28 13:23:31.330 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2021-11-28 13:23:31.348 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-3 - Starting...
+2021-11-28 13:23:31.361 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-3 - Start completed.
+2021-11-28 13:23:32.068 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-3 - Shutdown initiated...
+2021-11-28 13:23:32.072 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-3 - Shutdown completed.
+2021-11-28 13:23:32.124 INFO  com.jiawa.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 17.0.1 on DESKTOP-8V065KT with PID 9624 (E:\程序\Java\wiki\wiki\target\classes started by Undefeated604 in E:\程序\Java\wiki\wiki)
+2021-11-28 13:23:32.125 INFO  com.jiawa.wiki.config.WikiApplication             :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-11-28 13:23:32.240 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8085 (http)
+2021-11-28 13:23:32.241 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8085"]
+2021-11-28 13:23:32.241 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-11-28 13:23:32.241 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-28 13:23:32.250 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-11-28 13:23:32.250 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 123 ms
+2021-11-28 13:23:32.333 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-11-28 13:23:32.338 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8085"]
+2021-11-28 13:23:32.339 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8085 (http) with context path ''
+2021-11-28 13:23:32.342 INFO  com.jiawa.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.238 seconds (JVM running for 7790.39)
+2021-11-28 13:23:32.343 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-11-28 13:23:32.344 INFO  com.jiawa.wiki.config.WikiApplication             :26   [32m                  [0;39m 启动成功！！
+2021-11-28 13:23:32.344 INFO  com.jiawa.wiki.config.WikiApplication             :27   [32m                  [0;39m 地址：	http：//127.0.0.1:8085
+2021-11-28 13:23:41.004 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-28 13:23:41.004 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-11-28 13:23:41.004 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 0 ms
+2021-11-28 13:23:41.008 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-4 - Starting...
+2021-11-28 13:23:41.022 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-4 - Start completed.
+2021-11-28 13:29:01.394 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-4 - Shutdown initiated...
+2021-11-28 13:29:01.398 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-4 - Shutdown completed.
+2021-11-28 13:29:01.439 INFO  com.jiawa.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 17.0.1 on DESKTOP-8V065KT with PID 9624 (E:\程序\Java\wiki\wiki\target\classes started by Undefeated604 in E:\程序\Java\wiki\wiki)
+2021-11-28 13:29:01.439 INFO  com.jiawa.wiki.config.WikiApplication             :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-11-28 13:29:01.561 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8085 (http)
+2021-11-28 13:29:01.562 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8085"]
+2021-11-28 13:29:01.562 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-11-28 13:29:01.562 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-28 13:29:01.571 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-11-28 13:29:01.571 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 131 ms
+2021-11-28 13:29:01.650 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-11-28 13:29:01.654 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8085"]
+2021-11-28 13:29:01.656 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8085 (http) with context path ''
+2021-11-28 13:29:01.658 INFO  com.jiawa.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.239 seconds (JVM running for 8119.706)
+2021-11-28 13:29:01.659 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-11-28 13:29:01.659 INFO  com.jiawa.wiki.config.WikiApplication             :26   [32m                  [0;39m 启动成功！！
+2021-11-28 13:29:01.659 INFO  com.jiawa.wiki.config.WikiApplication             :27   [32m                  [0;39m 地址：	http：//127.0.0.1:8085
+2021-11-28 13:29:02.021 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-28 13:29:02.021 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-11-28 13:29:02.022 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2021-11-28 13:29:02.031 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-5 - Starting...
+2021-11-28 13:29:02.044 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-5 - Start completed.
+2021-11-28 13:41:29.986 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-5 - Shutdown initiated...
+2021-11-28 13:41:29.990 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-5 - Shutdown completed.
+2021-11-28 13:41:30.039 INFO  com.jiawa.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 17.0.1 on DESKTOP-8V065KT with PID 9624 (E:\程序\Java\wiki\wiki\target\classes started by Undefeated604 in E:\程序\Java\wiki\wiki)
+2021-11-28 13:41:30.040 INFO  com.jiawa.wiki.config.WikiApplication             :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-11-28 13:41:30.157 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8085 (http)
+2021-11-28 13:41:30.157 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8085"]
+2021-11-28 13:41:30.157 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-11-28 13:41:30.157 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-28 13:41:30.169 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-11-28 13:41:30.169 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 127 ms
+2021-11-28 13:41:30.253 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-11-28 13:41:30.257 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8085"]
+2021-11-28 13:41:30.259 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8085 (http) with context path ''
+2021-11-28 13:41:30.261 INFO  com.jiawa.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.24 seconds (JVM running for 8868.309)
+2021-11-28 13:41:30.262 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-11-28 13:41:30.262 INFO  com.jiawa.wiki.config.WikiApplication             :26   [32m                  [0;39m 启动成功！！
+2021-11-28 13:41:30.262 INFO  com.jiawa.wiki.config.WikiApplication             :27   [32m                  [0;39m 地址：	http：//127.0.0.1:8085
+2021-11-28 13:41:32.553 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-28 13:41:32.553 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-11-28 13:41:32.554 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2021-11-28 13:41:32.558 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-6 - Starting...
+2021-11-28 13:41:32.572 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-6 - Start completed.
+2021-11-28 13:42:04.221 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-6 - Shutdown initiated...
+2021-11-28 13:42:04.225 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-6 - Shutdown completed.
+2021-11-28 13:42:04.276 INFO  com.jiawa.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 17.0.1 on DESKTOP-8V065KT with PID 9624 (E:\程序\Java\wiki\wiki\target\classes started by Undefeated604 in E:\程序\Java\wiki\wiki)
+2021-11-28 13:42:04.277 INFO  com.jiawa.wiki.config.WikiApplication             :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-11-28 13:42:04.374 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8085 (http)
+2021-11-28 13:42:04.374 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8085"]
+2021-11-28 13:42:04.374 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-11-28 13:42:04.375 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-28 13:42:04.383 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-11-28 13:42:04.383 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 105 ms
+2021-11-28 13:42:04.465 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-11-28 13:42:04.469 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8085"]
+2021-11-28 13:42:04.471 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8085 (http) with context path ''
+2021-11-28 13:42:04.474 INFO  com.jiawa.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.213 seconds (JVM running for 8902.521)
+2021-11-28 13:42:04.475 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-11-28 13:42:04.475 INFO  com.jiawa.wiki.config.WikiApplication             :26   [32m                  [0;39m 启动成功！！
+2021-11-28 13:42:04.475 INFO  com.jiawa.wiki.config.WikiApplication             :27   [32m                  [0;39m 地址：	http：//127.0.0.1:8085
+2021-11-28 13:42:04.921 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-28 13:42:04.921 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-11-28 13:42:04.922 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2021-11-28 13:42:04.926 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-7 - Starting...
+2021-11-28 13:42:04.938 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-7 - Start completed.
+2021-11-28 13:44:18.631 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-7 - Shutdown initiated...
+2021-11-28 13:44:18.635 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-7 - Shutdown completed.
+2021-11-28 11:21:59.829 INFO  com.jiawa.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 17.0.1 on DESKTOP-8V065KT with PID 9624 (E:\程序\Java\wiki\wiki\target\classes started by Undefeated604 in E:\程序\Java\wiki\wiki)
+2021-11-28 11:21:59.829 INFO  com.jiawa.wiki.config.WikiApplication             :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-11-28 11:21:59.967 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8085 (http)
+2021-11-28 11:21:59.967 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8085"]
+2021-11-28 11:21:59.968 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-11-28 11:21:59.968 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-28 11:21:59.980 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-11-28 11:21:59.980 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 149 ms
+2021-11-28 11:22:00.072 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-11-28 11:22:00.077 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8085"]
+2021-11-28 11:22:00.078 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8085 (http) with context path ''
+2021-11-28 11:22:00.081 INFO  com.jiawa.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.28 seconds (JVM running for 498.112)
+2021-11-28 11:22:00.082 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-11-28 11:22:00.082 INFO  com.jiawa.wiki.config.WikiApplication             :26   [32m                  [0;39m 启动成功！！
+2021-11-28 11:22:00.082 INFO  com.jiawa.wiki.config.WikiApplication             :27   [32m                  [0;39m 地址：	http：//127.0.0.1:8085
+2021-11-28 11:22:08.988 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-28 11:22:08.988 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-11-28 11:22:08.989 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2021-11-28 11:22:09.019 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-11-28 11:22:09.173 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-11-28 11:48:38.401 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-11-28 11:48:38.408 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-11-28 11:48:38.468 INFO  com.jiawa.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 17.0.1 on DESKTOP-8V065KT with PID 9624 (E:\程序\Java\wiki\wiki\target\classes started by Undefeated604 in E:\程序\Java\wiki\wiki)
+2021-11-28 11:48:38.468 INFO  com.jiawa.wiki.config.WikiApplication             :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-11-28 11:48:38.606 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8085 (http)
+2021-11-28 11:48:38.606 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8085"]
+2021-11-28 11:48:38.606 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-11-28 11:48:38.607 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-28 11:48:38.617 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-11-28 11:48:38.617 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 147 ms
+2021-11-28 11:48:38.719 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-11-28 11:48:38.724 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8085"]
+2021-11-28 11:48:38.726 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8085 (http) with context path ''
+2021-11-28 11:48:38.729 INFO  com.jiawa.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.286 seconds (JVM running for 2096.76)
+2021-11-28 11:48:38.730 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-11-28 11:48:38.730 INFO  com.jiawa.wiki.config.WikiApplication             :26   [32m                  [0;39m 启动成功！！
+2021-11-28 11:48:38.730 INFO  com.jiawa.wiki.config.WikiApplication             :27   [32m                  [0;39m 地址：	http：//127.0.0.1:8085
+2021-11-28 11:48:40.499 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-28 11:48:40.500 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-11-28 11:48:40.501 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2021-11-28 11:48:40.501 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-2 - Starting...
+2021-11-28 11:48:40.518 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-2 - Start completed.
