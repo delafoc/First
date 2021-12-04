@@ -2,20 +2,22 @@
   <a-layout>
     <the-header></the-header>
     <router-view/>
-    <a-layout-footer style="text-align: center">
-      Wiki电子书
-    </a-layout-footer>
+    <the-footer></the-footer>
   </a-layout>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import TheHeader from '@/components/the-header.vue';// 引入组件
+import TheHeader from '@/components/the-header.vue';
+import TheFooter from "@/components/the-footer.vue";
+// 引入组件
 // import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
 
 export default defineComponent({
   name: 'app',
-  components: {// 引入组件
+  components: {
+    TheFooter,
+// 引入组件
     TheHeader,
   },
 });
