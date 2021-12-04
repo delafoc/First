@@ -2,8 +2,6 @@
   <a-layout>
     <a-layout-sider width="200" style="background: #fff">
       <a-menu
-          v-model:selectedKeys="selectedKeys2"
-          v-model:openKeys="openKeys"
           mode="inline"
           :style="{ height: '100%', borderRight: 0 }"
       >
@@ -55,8 +53,17 @@
 
 <script lang="ts">
 import {defineComponent} from 'vue';
+import axios from 'axios';
 
 export default defineComponent({
   name: 'Home',
+  setup() { // vue3新增的函数，初始化的时候会调用
+    console.log("setup");
+    // axios.get("http://localhost:8085/ebook/List?name=Spring").then(function (response){
+    //   console.log(response)
+    axios.get("http://localhost:8085/ebook/List?name=Spring").then((response) => {
+      console.log(response)
+    })
+  }
 });
 </script>
