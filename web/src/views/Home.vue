@@ -46,7 +46,10 @@
     <a-layout-content
         :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
     >
-      <a-list item-layout="vertical" size="large" :pagination="pagination" :data-source="listData">
+      <a-list item-layout="vertical" size="large" :grid="{ gutter: 20, column: 3 }"
+              :pagination="pagination" :data-source="ebooks">
+<!--        :grid="{ gutter: 20, column: 3 }" gutter表示列之间的间隔，column表示列的数量-->
+<!--        :pagination="pagination" 此代码为分页-->
         <!--        <div slot="footer"><b>ant design vue</b> footer part</div>-->
         <!--        已经弃用-->
         <!-- old -->
@@ -58,14 +61,14 @@
         <!-- 提供缩写# -->
         <!--        <template #item-icon><img src="../assets/img/tabbar/home.svg" alt=""></template>-->
 
-        <template #footer>
-          <div><b>ant design vue</b> footer part</div>
-        </template>
+        <!--        <template #footer>-->
+        <!--          <div><b>ant design vue</b> footer part</div>-->
+        <!--        </template>-->
         <template #renderItem="{ item }">
-          <a-list-item key="item.title">
+          <a-list-item key="item.name">
             <template #actions>
           <span v-for="{ type, text } in actions" :key="type">
-          <component v-bind:is="type" style="margin-right: 8px" />
+          <component v-bind:is="type" style="margin-right: 8px"/>
           {{ text }}
           </span>
             </template>
@@ -78,13 +81,15 @@
             </template>
             <a-list-item-meta :description="item.description">
               <template #title>
-                <a :href="item.href">{{ item.title }}</a>
+<!--                herf内容表示页面跳转-->
+<!--                name表示电子书名字-->
+                <a :href="item.href">{{ item.name }}</a>
               </template>
               <template #avatar>
-                <a-avatar :src="item.avatar"/>
+<!--                avatar表示图标封面-->
+                <a-avatar :src="item.cover"/>
               </template>
             </a-list-item-meta>
-            {{ item.content }}
           </a-list-item>
         </template>
       </a-list>
