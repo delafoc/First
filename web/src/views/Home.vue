@@ -65,7 +65,7 @@
           <a-list-item key="item.title">
             <template #actions>
           <span v-for="{ type, text } in actions" :key="type">
-          <component v-bind:is="type" style="margin-right: 8px"/>
+          <component v-bind:is="type" style="margin-right: 8px" />
           {{ text }}
           </span>
             </template>
@@ -97,7 +97,7 @@ import {defineComponent, onMounted, ref, reactive, toRef} from 'vue';
 import axios from 'axios';
 
 const listData: any = [];
-for (let i = 0; i < 23; i++) {
+for (let i = 1; i <= 23; i++) {
   listData.push({
     href: 'https://www.antdv.com/',
     title: `ant design vue part ${i}`,
