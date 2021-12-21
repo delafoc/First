@@ -155,7 +155,7 @@ export default defineComponent({
 });
 </script>
 
-
+<!--封面小图样式-->
 <style scoped>
 .ant-avatar {
   width: 50px;
