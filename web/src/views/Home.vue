@@ -117,7 +117,7 @@ for (let i = 1; i <= 23; i++) {
 export default defineComponent({
   name: 'Home',
   setup() { // vue3新增的函数，初始化的时候会调用
-    console.log("setup");
+    // console.log("setup");  //  不需要了
     const ebooks = ref();
     const ebooks1 = reactive({books: []});
     // axios.get("http://localhost:8085/ebook/List?name=Spring").then(function (response){
@@ -125,13 +125,13 @@ export default defineComponent({
 
 
     onMounted(() => { //生命周期函数，尽量将初始化函数放到里面
-      console.log("onMounted222")
+      // console.log("onMounted222") //  不需要了
       // "http://localhost:8085/ebook/List?name=Spring" 只会显示一个，需要将?name=Spring删除
       axios.get("/ebook/List").then((response) => {
         const data = response.data;
         ebooks.value = data.content;
         ebooks1.books = data.content;
-        console.log(response)
+        // console.log(response)  // 不需要了
       });
     })
 
