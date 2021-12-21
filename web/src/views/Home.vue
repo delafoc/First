@@ -125,9 +125,9 @@ export default defineComponent({
 
 
     onMounted(() => { //生命周期函数，尽量将初始化函数放到里面
-      console.log("onMounted")
+      console.log("onMounted222")
       // "http://localhost:8085/ebook/List?name=Spring" 只会显示一个，需要将?name=Spring删除
-      axios.get(process.env.VUE_APP_SERVER + "/ebook/List").then((response) => {
+      axios.get("/ebook/List").then((response) => {
         const data = response.data;
         ebooks.value = data.content;
         ebooks1.books = data.content;
