@@ -103,3 +103,115 @@
 2021-12-21 21:29:42.433 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
 2021-12-21 21:29:42.487 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :35   [32m                  [0;39m ------------- LogInterceptor 结束 耗时：331 ms -------------
 2021-12-21 21:29:42.488 INFO  com.jiawa.wiki.filter.LogFilter                   :31   [32m                  [0;39m ------------- LogFilter 结束 耗时：338 ms -------------
+2021-12-21 21:54:38.123 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-12-21 21:54:38.129 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-12-21 21:54:44.531 INFO  com.jiawa.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 17.0.1 on DESKTOP-8V065KT with PID 10136 (E:\程序\Java\wiki\wiki\target\classes started by Undefeated604 in E:\程序\Java\wiki\wiki)
+2021-12-21 21:54:44.533 INFO  com.jiawa.wiki.config.WikiApplication             :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-12-21 21:54:44.577 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-21 21:54:44.577 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-21 21:54:45.388 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8085 (http)
+2021-12-21 21:54:45.393 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8085"]
+2021-12-21 21:54:45.394 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-12-21 21:54:45.394 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-12-21 21:54:45.441 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-12-21 21:54:45.442 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 864 ms
+2021-12-21 21:54:46.057 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-12-21 21:54:46.071 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8085"]
+2021-12-21 21:54:46.098 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8085 (http) with context path ''
+2021-12-21 21:54:46.106 INFO  com.jiawa.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 1.911 seconds (JVM running for 2.416)
+2021-12-21 21:54:46.108 INFO  com.jiawa.wiki.config.WikiApplication             :26   [32m                  [0;39m 启动成功！！
+2021-12-21 21:54:46.108 INFO  com.jiawa.wiki.config.WikiApplication             :27   [32m                  [0;39m 地址：	http：//127.0.0.1:8085
+2021-12-21 21:55:05.718 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-21 21:55:05.718 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-12-21 21:55:05.719 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 0 ms
+2021-12-21 21:55:05.723 INFO  com.jiawa.wiki.filter.LogFilter                   :25   [32m                  [0;39m ------------- LogFilter 开始 -------------
+2021-12-21 21:55:05.723 INFO  com.jiawa.wiki.filter.LogFilter                   :26   [32m                  [0;39m 请求地址: http://localhost:8085/test/List GET
+2021-12-21 21:55:05.724 INFO  com.jiawa.wiki.filter.LogFilter                   :27   [32m                  [0;39m 远程地址: 127.0.0.1
+2021-12-21 21:55:05.730 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :23   [32m                  [0;39m ------------- LogInterceptor 开始 -------------
+2021-12-21 21:55:05.730 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :24   [32m                  [0;39m 请求地址: http://localhost:8085/test/List GET
+2021-12-21 21:55:05.731 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :25   [32m                  [0;39m 远程地址: 127.0.0.1
+2021-12-21 21:55:05.735 INFO  com.jiawa.wiki.aspect.LogAspect                   :43   [32m                  [0;39m ------------- 开始 -------------
+2021-12-21 21:55:05.735 INFO  com.jiawa.wiki.aspect.LogAspect                   :44   [32m                  [0;39m 请求地址: http://localhost:8085/test/List GET
+2021-12-21 21:55:05.736 INFO  com.jiawa.wiki.aspect.LogAspect                   :45   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.TestController.list
+2021-12-21 21:55:05.736 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m 远程地址: 127.0.0.1
+2021-12-21 21:55:05.756 INFO  com.jiawa.wiki.aspect.LogAspect                   :66   [32m                  [0;39m 请求参数: []
+2021-12-21 21:55:05.768 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-12-21 21:55:05.975 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-12-21 21:55:06.009 INFO  com.jiawa.wiki.aspect.LogAspect                   :78   [32m                  [0;39m 返回结果: [{"id":1,"name":"测试"}]
+2021-12-21 21:55:06.009 INFO  com.jiawa.wiki.aspect.LogAspect                   :79   [32m                  [0;39m ------------- 结束 耗时：274 ms -------------
+2021-12-21 21:55:06.041 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :35   [32m                  [0;39m ------------- LogInterceptor 结束 耗时：310 ms -------------
+2021-12-21 21:55:06.042 INFO  com.jiawa.wiki.filter.LogFilter                   :31   [32m                  [0;39m ------------- LogFilter 结束 耗时：317 ms -------------
+2021-12-21 22:00:58.644 INFO  com.jiawa.wiki.filter.LogFilter                   :25   [32m                  [0;39m ------------- LogFilter 开始 -------------
+2021-12-21 22:00:58.644 INFO  com.jiawa.wiki.filter.LogFilter                   :26   [32m                  [0;39m 请求地址: http://localhost:8085/test/List GET
+2021-12-21 22:00:58.645 INFO  com.jiawa.wiki.filter.LogFilter                   :27   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2021-12-21 22:00:58.645 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :23   [32m                  [0;39m ------------- LogInterceptor 开始 -------------
+2021-12-21 22:00:58.646 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :24   [32m                  [0;39m 请求地址: http://localhost:8085/test/List GET
+2021-12-21 22:00:58.646 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :25   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2021-12-21 22:00:58.646 INFO  com.jiawa.wiki.aspect.LogAspect                   :43   [32m                  [0;39m ------------- 开始 -------------
+2021-12-21 22:00:58.647 INFO  com.jiawa.wiki.aspect.LogAspect                   :44   [32m                  [0;39m 请求地址: http://localhost:8085/test/List GET
+2021-12-21 22:00:58.647 INFO  com.jiawa.wiki.aspect.LogAspect                   :45   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.TestController.list
+2021-12-21 22:00:58.647 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2021-12-21 22:00:58.648 INFO  com.jiawa.wiki.aspect.LogAspect                   :66   [32m                  [0;39m 请求参数: []
+2021-12-21 22:00:58.651 INFO  com.jiawa.wiki.aspect.LogAspect                   :78   [32m                  [0;39m 返回结果: [{"id":1,"name":"测试"}]
+2021-12-21 22:00:58.651 INFO  com.jiawa.wiki.aspect.LogAspect                   :79   [32m                  [0;39m ------------- 结束 耗时：5 ms -------------
+2021-12-21 22:00:58.653 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :35   [32m                  [0;39m ------------- LogInterceptor 结束 耗时：7 ms -------------
+2021-12-21 22:00:58.654 INFO  com.jiawa.wiki.filter.LogFilter                   :31   [32m                  [0;39m ------------- LogFilter 结束 耗时：9 ms -------------
+2021-12-21 22:00:58.726 INFO  com.jiawa.wiki.filter.LogFilter                   :25   [32m                  [0;39m ------------- LogFilter 开始 -------------
+2021-12-21 22:00:58.726 INFO  com.jiawa.wiki.filter.LogFilter                   :26   [32m                  [0;39m 请求地址: http://localhost:8085/favicon.ico GET
+2021-12-21 22:00:58.726 INFO  com.jiawa.wiki.filter.LogFilter                   :27   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2021-12-21 22:00:58.730 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :23   [32m                  [0;39m ------------- LogInterceptor 开始 -------------
+2021-12-21 22:00:58.730 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :24   [32m                  [0;39m 请求地址: http://localhost:8085/favicon.ico GET
+2021-12-21 22:00:58.730 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :25   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2021-12-21 22:00:58.732 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :35   [32m                  [0;39m ------------- LogInterceptor 结束 耗时：2 ms -------------
+2021-12-21 22:00:58.733 INFO  com.jiawa.wiki.filter.LogFilter                   :31   [32m                  [0;39m ------------- LogFilter 结束 耗时：7 ms -------------
+2021-12-21 22:00:58.736 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :23   [32m                  [0;39m ------------- LogInterceptor 开始 -------------
+2021-12-21 22:00:58.737 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :24   [32m                  [0;39m 请求地址: http://localhost:8085/error GET
+2021-12-21 22:00:58.737 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :25   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2021-12-21 22:00:58.756 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :35   [32m                  [0;39m ------------- LogInterceptor 结束 耗时：19 ms -------------
+2021-12-21 22:01:05.998 INFO  com.jiawa.wiki.filter.LogFilter                   :25   [32m                  [0;39m ------------- LogFilter 开始 -------------
+2021-12-21 22:01:05.998 INFO  com.jiawa.wiki.filter.LogFilter                   :26   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/List GET
+2021-12-21 22:01:05.998 INFO  com.jiawa.wiki.filter.LogFilter                   :27   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2021-12-21 22:01:06.003 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :23   [32m                  [0;39m ------------- LogInterceptor 开始 -------------
+2021-12-21 22:01:06.004 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :24   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/List GET
+2021-12-21 22:01:06.004 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :25   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2021-12-21 22:01:06.009 INFO  com.jiawa.wiki.aspect.LogAspect                   :43   [32m                  [0;39m ------------- 开始 -------------
+2021-12-21 22:01:06.010 INFO  com.jiawa.wiki.aspect.LogAspect                   :44   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/List GET
+2021-12-21 22:01:06.010 INFO  com.jiawa.wiki.aspect.LogAspect                   :45   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.list
+2021-12-21 22:01:06.010 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2021-12-21 22:01:06.012 INFO  com.jiawa.wiki.aspect.LogAspect                   :66   [32m                  [0;39m 请求参数: [{}]
+2021-12-21 22:01:06.051 INFO  com.jiawa.wiki.aspect.LogAspect                   :78   [32m                  [0;39m 返回结果: {"content":[{"description":"零基础入门 Java开发，企业级应用开发最佳首选框架","id":1,"name":"Spring Boot 入门教程"},{"description":"零基础入门 Vue开发，企业级应用开发最佳首选框架","id":2,"name":"Vue 入门教程"},{"description":"零基础入门 Python开发，企业级应用开发最佳首选框架","id":3,"name":"Python 入门教程"},{"description":"零基础入门 Mysql开发，企业级应用开发最佳首选框架","id":4,"name":"Mysql 入门教程"},{"description":"零基础入门 Oracle开发，企业级应用开发最佳首选框架","id":5,"name":"Oracle 入门教程"}],"success":true}
+2021-12-21 22:01:06.051 INFO  com.jiawa.wiki.aspect.LogAspect                   :79   [32m                  [0;39m ------------- 结束 耗时：42 ms -------------
+2021-12-21 22:01:06.055 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :35   [32m                  [0;39m ------------- LogInterceptor 结束 耗时：51 ms -------------
+2021-12-21 22:01:06.055 INFO  com.jiawa.wiki.filter.LogFilter                   :31   [32m                  [0;39m ------------- LogFilter 结束 耗时：57 ms -------------
+2021-12-21 22:04:26.712 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-12-21 22:04:26.719 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-12-21 22:04:30.672 INFO  com.jiawa.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 17.0.1 on DESKTOP-8V065KT with PID 10612 (E:\程序\Java\wiki\wiki\target\classes started by Undefeated604 in E:\程序\Java\wiki\wiki)
+2021-12-21 22:04:30.673 INFO  com.jiawa.wiki.config.WikiApplication             :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-12-21 22:04:30.717 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-21 22:04:30.718 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-21 22:04:31.510 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8085 (http)
+2021-12-21 22:04:31.516 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8085"]
+2021-12-21 22:04:31.516 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-12-21 22:04:31.516 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-12-21 22:04:31.563 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-12-21 22:04:31.564 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 845 ms
+2021-12-21 22:04:32.158 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-12-21 22:04:32.173 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8085"]
+2021-12-21 22:04:32.202 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8085 (http) with context path ''
+2021-12-21 22:04:32.210 INFO  com.jiawa.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 1.855 seconds (JVM running for 2.438)
+2021-12-21 22:04:32.212 INFO  com.jiawa.wiki.config.WikiApplication             :26   [32m                  [0;39m 启动成功！！
+2021-12-21 22:04:32.213 INFO  com.jiawa.wiki.config.WikiApplication             :27   [32m                  [0;39m 地址：	http：//127.0.0.1:8085
+2021-12-21 22:04:37.449 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-21 22:04:37.451 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-12-21 22:04:37.452 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2021-12-21 22:04:37.466 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2021-12-21 22:04:37.467 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/test/List GET
+2021-12-21 22:04:37.467 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.TestController.list
+2021-12-21 22:04:37.467 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 127.0.0.1
+2021-12-21 22:04:37.487 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: []
+2021-12-21 22:04:37.499 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-12-21 22:04:37.694 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-12-21 22:04:37.727 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: [{"id":1,"name":"测试"}]
+2021-12-21 22:04:37.728 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：263 ms -------------
+2021-12-21 22:05:12.153 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-12-21 22:05:12.161 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
