@@ -42,3 +42,64 @@
 2021-12-21 20:19:36.304 INFO  com.jiawa.wiki.filter.LogFilter                   :26   [32m                  [0;39m 请求地址: http://localhost:8085/test/List GET
 2021-12-21 20:19:36.305 INFO  com.jiawa.wiki.filter.LogFilter                   :27   [32m                  [0;39m 远程地址: 127.0.0.1
 2021-12-21 20:19:36.324 INFO  com.jiawa.wiki.filter.LogFilter                   :31   [32m                  [0;39m ------------- LogFilter 结束 耗时：19 ms -------------
+2021-12-21 21:28:07.163 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-12-21 21:28:07.168 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-12-21 21:28:07.238 INFO  com.jiawa.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 17.0.1 on DESKTOP-8V065KT with PID 3180 (E:\程序\Java\wiki\wiki\target\classes started by Undefeated604 in E:\程序\Java\wiki\wiki)
+2021-12-21 21:28:07.239 INFO  com.jiawa.wiki.config.WikiApplication             :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-12-21 21:28:07.434 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8085 (http)
+2021-12-21 21:28:07.435 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8085"]
+2021-12-21 21:28:07.435 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-12-21 21:28:07.435 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-12-21 21:28:07.451 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-12-21 21:28:07.451 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 209 ms
+2021-12-21 21:28:07.588 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-12-21 21:28:07.595 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8085"]
+2021-12-21 21:28:07.597 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8085 (http) with context path ''
+2021-12-21 21:28:07.601 INFO  com.jiawa.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.395 seconds (JVM running for 4311.54)
+2021-12-21 21:28:07.602 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-12-21 21:28:07.603 INFO  com.jiawa.wiki.config.WikiApplication             :26   [32m                  [0;39m 启动成功！！
+2021-12-21 21:28:07.603 INFO  com.jiawa.wiki.config.WikiApplication             :27   [32m                  [0;39m 地址：	http：//127.0.0.1:8085
+2021-12-21 21:28:13.101 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-21 21:28:13.101 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-12-21 21:28:13.102 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2021-12-21 21:28:13.102 INFO  com.jiawa.wiki.filter.LogFilter                   :25   [32m                  [0;39m ------------- LogFilter 开始 -------------
+2021-12-21 21:28:13.102 INFO  com.jiawa.wiki.filter.LogFilter                   :26   [32m                  [0;39m 请求地址: http://localhost:8085/test/List GET
+2021-12-21 21:28:13.102 INFO  com.jiawa.wiki.filter.LogFilter                   :27   [32m                  [0;39m 远程地址: 127.0.0.1
+2021-12-21 21:28:13.103 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :23   [32m                  [0;39m ------------- LogInterceptor 开始 -------------
+2021-12-21 21:28:13.104 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :24   [32m                  [0;39m 请求地址: http://localhost:8085/test/List GET
+2021-12-21 21:28:13.105 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :25   [32m                  [0;39m 远程地址: 127.0.0.1
+2021-12-21 21:28:13.106 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-2 - Starting...
+2021-12-21 21:28:13.125 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-2 - Start completed.
+2021-12-21 21:28:13.129 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :35   [32m                  [0;39m ------------- LogInterceptor 结束 耗时：24 ms -------------
+2021-12-21 21:28:13.130 INFO  com.jiawa.wiki.filter.LogFilter                   :31   [32m                  [0;39m ------------- LogFilter 结束 耗时：27 ms -------------
+2021-12-21 21:29:33.245 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-2 - Shutdown initiated...
+2021-12-21 21:29:33.247 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-2 - Shutdown completed.
+2021-12-21 21:29:35.692 INFO  com.jiawa.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 17.0.1 on DESKTOP-8V065KT with PID 6268 (E:\程序\Java\wiki\wiki\target\classes started by Undefeated604 in E:\程序\Java\wiki\wiki)
+2021-12-21 21:29:35.693 INFO  com.jiawa.wiki.config.WikiApplication             :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-12-21 21:29:35.737 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-21 21:29:35.737 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-21 21:29:36.436 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8085 (http)
+2021-12-21 21:29:36.443 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8085"]
+2021-12-21 21:29:36.443 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-12-21 21:29:36.444 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-12-21 21:29:36.504 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-12-21 21:29:36.505 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 767 ms
+2021-12-21 21:29:36.905 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-12-21 21:29:36.917 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8085"]
+2021-12-21 21:29:36.947 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8085 (http) with context path ''
+2021-12-21 21:29:36.956 INFO  com.jiawa.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 1.612 seconds (JVM running for 2.202)
+2021-12-21 21:29:36.958 INFO  com.jiawa.wiki.config.WikiApplication             :26   [32m                  [0;39m 启动成功！！
+2021-12-21 21:29:36.958 INFO  com.jiawa.wiki.config.WikiApplication             :27   [32m                  [0;39m 地址：	http：//127.0.0.1:8085
+2021-12-21 21:29:42.141 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-21 21:29:42.142 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-12-21 21:29:42.143 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2021-12-21 21:29:42.149 INFO  com.jiawa.wiki.filter.LogFilter                   :25   [32m                  [0;39m ------------- LogFilter 开始 -------------
+2021-12-21 21:29:42.149 INFO  com.jiawa.wiki.filter.LogFilter                   :26   [32m                  [0;39m 请求地址: http://localhost:8085/test/List GET
+2021-12-21 21:29:42.150 INFO  com.jiawa.wiki.filter.LogFilter                   :27   [32m                  [0;39m 远程地址: 127.0.0.1
+2021-12-21 21:29:42.155 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :23   [32m                  [0;39m ------------- LogInterceptor 开始 -------------
+2021-12-21 21:29:42.155 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :24   [32m                  [0;39m 请求地址: http://localhost:8085/test/List GET
+2021-12-21 21:29:42.155 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :25   [32m                  [0;39m 远程地址: 127.0.0.1
+2021-12-21 21:29:42.167 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-12-21 21:29:42.433 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-12-21 21:29:42.487 INFO  com.jiawa.wiki.interceptor.LogInterceptor         :35   [32m                  [0;39m ------------- LogInterceptor 结束 耗时：331 ms -------------
+2021-12-21 21:29:42.488 INFO  com.jiawa.wiki.filter.LogFilter                   :31   [32m                  [0;39m ------------- LogFilter 结束 耗时：338 ms -------------
