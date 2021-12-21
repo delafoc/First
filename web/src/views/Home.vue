@@ -46,8 +46,7 @@
     <a-layout-content
         :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
     >
-      <a-list item-layout="vertical" size="large" :grid="{ gutter: 20, column: 3 }"
-              :pagination="pagination" :data-source="ebooks">
+      <a-list item-layout="vertical" size="large" :grid="{ gutter: 20, column: 3 }" :pagination="pagination" :data-source="ebooks">
 <!--        :grid="{ gutter: 20, column: 3 }" gutter表示列之间的间隔，column表示列的数量-->
 <!--        :pagination="pagination" 此代码为分页-->
         <!--        <div slot="footer"><b>ant design vue</b> footer part</div>-->
@@ -72,13 +71,14 @@
           {{ text }}
           </span>
             </template>
-            <template #extra>
-              <img
-                  width="272"
-                  alt="logo"
-                  src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"
-              />
-            </template>
+<!--            描述图片-->
+<!--            <template #extra>-->
+<!--              <img-->
+<!--                  width="272"-->
+<!--                  alt="logo"-->
+<!--                  src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"-->
+<!--              />-->
+<!--            </template>-->
             <a-list-item-meta :description="item.description">
               <template #title>
 <!--                herf内容表示页面跳转-->
@@ -126,7 +126,8 @@ export default defineComponent({
 
     onMounted(() => { //生命周期函数，尽量将初始化函数放到里面
       console.log("onMounted")
-      axios.get("http://localhost:8085/ebook/List?name=Spring").then((response) => {
+      // "http://localhost:8085/ebook/List?name=Spring" 只会显示一个，需要将?name=Spring删除
+      axios.get("http://localhost:8085/ebook/List").then((response) => {
         const data = response.data;
         ebooks.value = data.content;
         ebooks1.books = data.content;
@@ -153,3 +154,14 @@ export default defineComponent({
   }
 });
 </script>
+
+
+<style scoped>
+.ant-avatar {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 8%;
+  margin: 5px 0;
+}
+</style>
