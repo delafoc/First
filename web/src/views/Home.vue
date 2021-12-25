@@ -101,18 +101,19 @@
 import {defineComponent, onMounted, ref, reactive, toRef} from 'vue';
 import axios from 'axios';
 
-const listData: any = [];
-for (let i = 1; i <= 23; i++) {
-  listData.push({
-    href: 'https://www.antdv.com/',
-    title: `ant design vue part ${i}`,
-    avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
-    description:
-        'Ant Design, a design language for background applications, is refined by Ant UED Team.',
-    content:
-        'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
-  });
-}
+// 假数据注释掉
+// const listData: any = [];
+// for (let i = 1; i <= 23; i++) {
+//   listData.push({
+//     href: 'https://www.antdv.com/',
+//     title: `ant design vue part ${i}`,
+//     avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+//     description:
+//         'Ant Design, a design language for background applications, is refined by Ant UED Team.',
+//     content:
+//         'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
+//   });
+// }
 
 export default defineComponent({
   name: 'Home',
@@ -127,23 +128,29 @@ export default defineComponent({
     onMounted(() => { //生命周期函数，尽量将初始化函数放到里面
       // console.log("onMounted222") //  不需要了
       // "http://localhost:8085/ebook/List?name=Spring" 只会显示一个，需要将?name=Spring删除
-      axios.get("/ebook/List").then((response) => {
+      axios.get("/ebook/List", {
+        params: {
+          page: 1,
+          size: 1000
+        }
+          }
+      ).then((response) => {
         const data = response.data;
-        ebooks.value = data.content;
-        ebooks1.books = data.content;
+        ebooks.value = data.content.list;
+        // ebooks1.books = data.content;
         // console.log(response)  // 不需要了
       });
     })
 
     return {
       ebooks,
-      ebooks2: toRef(ebooks1, "books"),
-      listData,
+      // ebooks2: toRef(ebooks1, "books"),
+      // listData,
       pagination: {
         onChange: (page: any) => {
           console.log(page);
         },
-        pageSize: 3,
+        pageSize: 200,
       },
       actions: [
         {type: 'star-o', text: '156'},
