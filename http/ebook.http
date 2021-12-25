@@ -1,4 +1,3 @@
-GET http://localhost:8085/ebook/List?name=Spring
-Accept: application/json
+GET http://localhost:8085/ebook/List
 
 ###
