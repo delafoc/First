@@ -1,12 +1,12 @@
 package com.jiawa.wiki.controller;
 
-import com.jiawa.wiki.req.EbookReq;
+import com.jiawa.wiki.req.EbookQueryReq;
+import com.jiawa.wiki.req.EbookSaveReq;
 import com.jiawa.wiki.resp.CommonResp;
-import com.jiawa.wiki.resp.EbookResp;
+import com.jiawa.wiki.resp.EbookQueryResp;
 import com.jiawa.wiki.resp.PageResp;
 import com.jiawa.wiki.service.EbookService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -14,18 +14,27 @@ import javax.annotation.Resource;
 @RestController
 //@RestController 加下面写的 @GetMapping("/ebook/List") 等于
 // @RestController("/ebook") 加下面写的 @GetMapping(" /List")
+@RequestMapping("/ebook")
 public class EbookController {
     @Resource
     private EbookService ebookService;
 
-    @GetMapping("/ebook/List")
-    public CommonResp list(EbookReq req) {
-        CommonResp<PageResp<EbookResp>> resp = new CommonResp<>();
-//        List<EbookResp> list = ebookService.list(req);
-        PageResp<EbookResp> list = ebookService.list(req);
+    //    @GetMapping("/ebook/List")
+    @GetMapping("/List")
+    public CommonResp list(EbookQueryReq req) {
+        CommonResp<PageResp<EbookQueryResp>> resp = new CommonResp<>();
+//        List<EbookQueryResp> list = ebookService.list(req);
+        PageResp<EbookQueryResp> list = ebookService.list(req);
         resp.setContent(list);
         return resp;
 
         //可增加ebook表的增删改查
+    }
+
+    @PostMapping("/save") //保存、更新类的一般用PostMapping
+    public CommonResp save(@RequestBody EbookSaveReq req) {
+        CommonResp resp = new CommonResp<>();
+        ebookService.save(req);
+        return resp;
     }
 }

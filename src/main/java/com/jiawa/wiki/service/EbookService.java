@@ -5,8 +5,9 @@ import com.github.pagehelper.PageInfo;
 import com.jiawa.wiki.domain.Ebook;
 import com.jiawa.wiki.domain.EbookExample;
 import com.jiawa.wiki.mapper.EbookMapper;
-import com.jiawa.wiki.req.EbookReq;
-import com.jiawa.wiki.resp.EbookResp;
+import com.jiawa.wiki.req.EbookQueryReq;
+import com.jiawa.wiki.req.EbookSaveReq;
+import com.jiawa.wiki.resp.EbookQueryResp;
 import com.jiawa.wiki.resp.PageResp;
 import com.jiawa.wiki.util.CopyUtil;
 import org.slf4j.Logger;
@@ -26,7 +27,7 @@ public class EbookService {
     @Resource // 注入EbookMapper
     private EbookMapper ebookMapper;
 
-    public PageResp<EbookResp> list(EbookReq req) {
+    public PageResp<EbookQueryResp> list(EbookQueryReq req) {
         // 表示第一页数组从1开始 而且只能查下面的第一条数据库查询语句， 最好就放在查询语句的前一行
 //        PageHelper.startPage(1, 3);
         EbookExample ebookExample = new EbookExample();
@@ -47,17 +48,17 @@ public class EbookService {
 
 
         //实现返回类的封装
-//        List<EbookResp> respList = new ArrayList<>();
+//        List<EbookQueryResp> respList = new ArrayList<>();
 //
 //        for (Ebook ebook : ebookList) {
-////            EbookResp ebookResp = new EbookResp();
+////            EbookQueryResp ebookResp = new EbookQueryResp();
 //////            ebookResp.setId(ebook.getId());
 ////            BeanUtils.copyProperties(ebook, ebookResp); // 复制
 //////            ebookResp.setId(123L);
 //
 
         //对象复制
-//            EbookResp ebookResp = CopyUtil.copy(ebook, EbookResp.class);
+//            EbookQueryResp ebookResp = CopyUtil.copy(ebook, EbookQueryResp.class);
 //
 //            respList.add(ebookResp);
 //        }
@@ -66,12 +67,28 @@ public class EbookService {
 
 
         // 列表复制
-        List<EbookResp> list = CopyUtil.copyList(ebookList, EbookResp.class);
+        List<EbookQueryResp> list = CopyUtil.copyList(ebookList, EbookQueryResp.class);
 
-        PageResp<EbookResp> pageResp = new PageResp();
+        PageResp<EbookQueryResp> pageResp = new PageResp();
         pageResp.setTotal(pageInfo.getTotal());
         pageResp.setList(list);
 
         return pageResp;
+    }
+
+
+    /**
+     * 更新保存的方法
+     */
+
+    public void save(EbookSaveReq req) {
+        Ebook ebook = CopyUtil.copy(req, Ebook.class);
+        if (ObjectUtils.isEmpty(req.getId())) {
+            // 新增
+            ebookMapper.insert(ebook);
+        } else {
+            // 更新
+            ebookMapper.updateByPrimaryKey(ebook);
+        }
     }
 }

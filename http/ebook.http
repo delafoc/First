@@ -1,3 +1,19 @@
 GET http://localhost:8085/ebook/List?page=1&size=4
 
 ###
+
+
+
+POST http://localhost:8085/ebook/save
+Content-Type: application/json
+
+{}
+
+###
+
+POST http://localhost:8085/api/item
+Content-Type: application/x-www-form-urlencoded
+
+id=99&content=new-element
+
+###
