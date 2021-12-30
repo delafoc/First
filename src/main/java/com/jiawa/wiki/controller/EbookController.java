@@ -9,6 +9,7 @@ import com.jiawa.wiki.service.EbookService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.validation.Valid;
 
 
 @RestController
@@ -21,7 +22,8 @@ public class EbookController {
 
     //    @GetMapping("/ebook/List")
     @GetMapping("/List")
-    public CommonResp list(EbookQueryReq req) {
+    public CommonResp list(@Valid EbookQueryReq req) {
+        // 加@Valid 表示开启校验规则
         CommonResp<PageResp<EbookQueryResp>> resp = new CommonResp<>();
 //        List<EbookQueryResp> list = ebookService.list(req);
         PageResp<EbookQueryResp> list = ebookService.list(req);

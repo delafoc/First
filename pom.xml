@@ -54,6 +54,12 @@
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
 
+<!--        引入Validation依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>

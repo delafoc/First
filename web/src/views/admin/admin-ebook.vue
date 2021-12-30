@@ -53,19 +53,19 @@
   >
     <a-form :model="ebook" :label-col="{ span: 6 }" :wrapper-col="{ span: 18 }">
       <a-form-item label="封面">
-        <a-input v-model:value="ebook.cover" />
+        <a-input v-model:value="ebook.cover"/>
       </a-form-item>
       <a-form-item label="名称">
-        <a-input v-model:value="ebook.name" />
+        <a-input v-model:value="ebook.name"/>
       </a-form-item>
       <a-form-item label="分类一">
-        <a-input v-model:value="ebook.category1Id" />
+        <a-input v-model:value="ebook.category1Id"/>
       </a-form-item>
       <a-form-item label="分类二">
-        <a-input v-model:value="ebook.category2Id" />
+        <a-input v-model:value="ebook.category2Id"/>
       </a-form-item>
       <a-form-item label="描述">
-        <a-input v-model:value="ebook.description" type="textarea" />
+        <a-input v-model:value="ebook.description" type="textarea"/>
       </a-form-item>
     </a-form>
   </a-modal>
@@ -75,6 +75,7 @@
 <script lang="ts">
 import {defineComponent, onMounted, ref} from 'vue';
 import axios from 'axios';
+import {message} from "ant-design-vue";
 
 export default defineComponent({
   name: 'AdminEbook',
@@ -82,7 +83,7 @@ export default defineComponent({
     const ebooks = ref();
     const pagination = ref({
       current: 1,
-      pageSize: 4,
+      pageSize: 1001,
       total: 0
     });
     const loading = ref(false);
@@ -139,11 +140,15 @@ export default defineComponent({
       }).then((response) => {
         loading.value = false;
         const data = response.data;
-        ebooks.value = data.content.list;
+        if (data.success) { // 成功则进行继续查询
+          ebooks.value = data.content.list;
 
-        // 重置分页按钮
-        pagination.value.current = params.page;
-        pagination.value.total = data.content.total;
+          // 重置分页按钮
+          pagination.value.current = params.page;
+          pagination.value.total = data.content.total;
+        } else { // 不成功则弹出错误提示框
+          message.error(data.message);
+        }
       });
     };
 
