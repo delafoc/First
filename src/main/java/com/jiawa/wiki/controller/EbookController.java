@@ -35,7 +35,7 @@ public class EbookController {
 
     // 更新编辑操作
     @PostMapping("/save") //保存、更新类的一般用PostMapping
-    public CommonResp save(@RequestBody EbookSaveReq req) {
+    public CommonResp save(@Valid @RequestBody EbookSaveReq req) {
         CommonResp resp = new CommonResp<>();
         ebookService.save(req);
         return resp;
