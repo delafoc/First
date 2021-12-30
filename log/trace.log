@@ -2844,3 +2844,5 @@ Caused by: java.lang.ClassNotFoundException: Cannot find class: com.jiawa.wiki.d
 2021-12-30 16:50:53.316 INFO  com.jiawa.wiki.service.EbookService               :51   [32m                  [0;39m 总页数：2
 2021-12-30 16:50:53.317 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":3,"category2Id":4,"description":"打到收服就可以了","id":5,"name":"雪中悍刀行"},{"category1Id":12,"category2Id":1,"id":6,"name":"剑来"},{"category1Id":12,"category2Id":23,"id":8227331779338496,"name":"斗罗大陆"}],"total":7},"success":true}
 2021-12-30 16:50:53.317 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：8 ms -------------
+2021-12-30 16:52:58.142 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-3 - Shutdown initiated...
+2021-12-30 16:52:58.147 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-3 - Shutdown completed.
