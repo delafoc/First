@@ -18,7 +18,7 @@ public class SnowFlake {
     /**
      * 每一部分占用的位数
      */
-    private final static long SEQUENCE_BIT = 12; //序列号占用的位数
+    private final static long SEQUENCE_BIT = 8; //序列号占用的位数
     private final static long MACHINE_BIT = 5;   //机器标识占用的位数
     private final static long DATACENTER_BIT = 5;//数据中心占用的位数
 
@@ -100,12 +100,12 @@ public class SnowFlake {
 
     public static void main(String[] args) throws ParseException {
         // 时间戳
-        // System.out.println(System.currentTimeMillis());
-        // System.out.println(new Date().getTime());
-        //
-        // String dateTime = "2021-01-01 08:00:00";
-        // SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-        // System.out.println(sdf.parse(dateTime).getTime());
+//         System.out.println(System.currentTimeMillis());
+//         System.out.println(new Date().getTime());
+//
+//         String dateTime = "2021-01-01 08:00:00";
+//         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+//         System.out.println(sdf.parse(dateTime).getTime());
 
         SnowFlake snowFlake = new SnowFlake(1, 1);
 
@@ -114,5 +114,6 @@ public class SnowFlake {
             System.out.println(snowFlake.nextId());
             System.out.println(System.currentTimeMillis() - start);
         }
+//        System.out.println(snowFlake.nextId());
     }
 }

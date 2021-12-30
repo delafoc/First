@@ -31,10 +31,19 @@ public class EbookController {
         //可增加ebook表的增删改查
     }
 
+    // 更新编辑操作
     @PostMapping("/save") //保存、更新类的一般用PostMapping
     public CommonResp save(@RequestBody EbookSaveReq req) {
         CommonResp resp = new CommonResp<>();
         ebookService.save(req);
+        return resp;
+    }
+
+    // 删除操作
+    @DeleteMapping("/delete/{id}") // 删除一般按照ID来删除
+    public CommonResp delete(@PathVariable Long id) {
+        CommonResp resp = new CommonResp<>();
+        ebookService.delete(id);
         return resp;
     }
 }
