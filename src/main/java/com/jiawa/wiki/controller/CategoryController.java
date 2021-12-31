@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
+import java.util.List;
 
 
 @RestController
@@ -19,6 +20,19 @@ import javax.validation.Valid;
 public class CategoryController {
     @Resource
     private CategoryService categoryService;
+
+    //    @GetMapping("/category/List")
+    @GetMapping("/all")
+    public CommonResp all() {
+        // 加@Valid 表示开启校验规则
+        CommonResp<List<CategoryQueryResp>> resp = new CommonResp<>();
+//        List<CategoryQueryResp> list = categoryService.list(req);
+        List<CategoryQueryResp> list = categoryService.all();
+        resp.setContent(list);
+        return resp;
+
+        //可增加category表的增删改查
+    }
 
     //    @GetMapping("/category/List")
     @GetMapping("/List")

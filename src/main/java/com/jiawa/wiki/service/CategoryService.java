@@ -31,10 +31,23 @@ public class CategoryService {
     @Resource // 注入SnowFlake
     private SnowFlake snowFlake;
 
+    public List<CategoryQueryResp> all() {
+        CategoryExample categoryExample = new CategoryExample();
+        categoryExample.setOrderByClause("sort asc");
+        List<Category> categoryList = categoryMapper.selectByExample(categoryExample);
+
+
+        // 列表复制
+        List<CategoryQueryResp> list = CopyUtil.copyList(categoryList, CategoryQueryResp.class);
+
+        return list;
+    }
+
     public PageResp<CategoryQueryResp> list(CategoryQueryReq req) {
         // 表示第一页数组从1开始 而且只能查下面的第一条数据库查询语句， 最好就放在查询语句的前一行
 //        PageHelper.startPage(1, 3);
         CategoryExample categoryExample = new CategoryExample();
+        categoryExample.setOrderByClause("sort asc");
         CategoryExample.Criteria criteria = categoryExample.createCriteria();
         // 上面的两行的写法固定
         PageHelper.startPage(req.getPage(), req.getSize());
