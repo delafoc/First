@@ -12,7 +12,7 @@
 <!--            @search="handleQuery({page: 1, size: pagination.pageSize})"-->
 <!--        />  有问题，暂时不会解决 -->
           <a-form-item>
-            <a-input v-model:value="param.name" placeholder="名称">
+            <a-input v-model:value="param.name" placeholder="input search ebook">
             </a-input>
           </a-form-item>
           <a-form-item>
