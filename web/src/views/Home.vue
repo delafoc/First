@@ -7,17 +7,16 @@
           @click="handleClick"
       >
         <a-menu-item key="welcome">
-          <router-link to="'/'">
-            <MailOutlined />
-            <span>欢迎</span>
-          </router-link>
+          <MailOutlined/>
+          <span>欢迎</span>
         </a-menu-item>
         <a-sub-menu v-for="item in level1" :key="item.id">
           <template v-slot:title>
-            <span><user-outlined />{{item.name}}</span>
+            <span><user-outlined/>{{ item.name }}</span>
           </template>
           <a-menu-item v-for="child in item.children" :key="child.id">
-            <MailOutlined /><span>{{child.name}}</span>
+            <MailOutlined/>
+            <span>{{ child.name }}</span>
           </a-menu-item>
         </a-sub-menu>
       </a-menu>
@@ -25,9 +24,13 @@
     <a-layout-content
         :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
     >
-      <a-list item-layout="vertical" size="large" :grid="{ gutter: 20, column: 3 }" :pagination="pagination" :data-source="ebooks">
-<!--        :grid="{ gutter: 20, column: 3 }" gutter表示列之间的间隔，column表示列的数量-->
-<!--        :pagination="pagination" 此代码为分页-->
+      <div class="welcome" v-show="isShowWelcome">
+        <h1>欢迎使用Wiki电子书</h1>
+      </div>
+      <a-list v-show="!isShowWelcome" item-layout="vertical" size="large" :grid="{ gutter: 20, column: 3 }"
+              :pagination="pagination" :data-source="ebooks">
+        <!--        :grid="{ gutter: 20, column: 3 }" gutter表示列之间的间隔，column表示列的数量-->
+        <!--        :pagination="pagination" 此代码为分页-->
         <!--        <div slot="footer"><b>ant design vue</b> footer part</div>-->
         <!--        已经弃用-->
         <!-- old -->
@@ -50,22 +53,22 @@
           {{ text }}
           </span>
             </template>
-<!--            描述图片-->
-<!--            <template #extra>-->
-<!--              <img-->
-<!--                  width="272"-->
-<!--                  alt="logo"-->
-<!--                  src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"-->
-<!--              />-->
-<!--            </template>-->
+            <!--            描述图片-->
+            <!--            <template #extra>-->
+            <!--              <img-->
+            <!--                  width="272"-->
+            <!--                  alt="logo"-->
+            <!--                  src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"-->
+            <!--              />-->
+            <!--            </template>-->
             <a-list-item-meta :description="item.description">
               <template #title>
-<!--                herf内容表示页面跳转-->
-<!--                name表示电子书名字-->
+                <!--                herf内容表示页面跳转-->
+                <!--                name表示电子书名字-->
                 <a :href="item.href">{{ item.name }}</a>
               </template>
               <template #avatar>
-<!--                avatar表示图标封面-->
+                <!--                avatar表示图标封面-->
                 <a-avatar :src="item.cover"/>
               </template>
             </a-list-item-meta>
@@ -98,12 +101,12 @@ import {Tool} from "@/util/tool";
 
 export default defineComponent({
   name: 'Home',
-  setup() { // vue3新增的函数，初始化的时候会调用
+  setup: function () { // vue3新增的函数，初始化的时候会调用
     // console.log("setup");  //  不需要了
     const ebooks = ref();
     // const ebooks1 = reactive({books: []});
 
-    const level1 =  ref();
+    const level1 = ref();
     let categorys: any;
     /**
      * 查询所有分类
@@ -133,19 +136,17 @@ export default defineComponent({
     //   console.log(response)
 
 
-    const handleClick = () => {
-      console.log("menu click");
-    }
+    const isShowWelcome = ref(true);
+    let categoryId2 = 0;
 
-    onMounted(() => { //生命周期函数，尽量将初始化函数放到里面
-      handleQueryCategory();
-      // console.log("onMounted222") //  不需要了
-      // "http://localhost:8085/ebook/List?name=Spring" 只会显示一个，需要将?name=Spring删除
+
+    const handleQueryEbook = () => {
       axios.get("/ebook/List", {
-        params: {
-          page: 1,
-          size: 1000
-        }
+            params: {
+              page: 1,
+              size: 1000,
+              categoryId2: categoryId2
+            }
           }
       ).then((response) => {
         const data = response.data;
@@ -153,7 +154,41 @@ export default defineComponent({
         // ebooks1.books = data.content;
         // console.log(response)  // 不需要了
       });
-    })
+    };
+
+    const handleClick = (value: any) => {
+      // console.log("menu click", value);
+      if (value.key === 'welcome') {
+        isShowWelcome.value = true;
+      } else {
+        categoryId2 = value.key;
+        isShowWelcome.value = false;
+        handleQueryEbook();
+      }
+      // isShowWelcome.value = value.key === 'welcome';
+    };
+
+
+
+    onMounted(() => { //生命周期函数，尽量将初始化函数放到里面
+      handleQueryCategory();
+      // handleQueryEbook();
+      // console.log("onMounted222") //  不需要了
+      // "http://localhost:8085/ebook/List?name=Spring" 只会显示一个，需要将?name=Spring删除
+      // axios.get("/ebook/List", {
+      //       params: {
+      //         page: 1,
+      //         size: 1000,
+      //         categoryId2: categoryId2
+      //       }
+      //     }
+      // ).then((response) => {
+      //   const data = response.data;
+      //   ebooks.value = data.content.list;
+      //   // ebooks1.books = data.content;
+      //   // console.log(response)  // 不需要了
+      // });
+    });
 
     return {
       ebooks,
@@ -173,6 +208,8 @@ export default defineComponent({
 
       handleClick,
       level1,
+
+      isShowWelcome
     }
   }
 });
