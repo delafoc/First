@@ -564,3 +564,385 @@
 2022-01-02 12:51:00.828 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m <==      Total: 10
 2022-01-02 12:51:00.828 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML&CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":8293835229896960,"name":"其他","parent":0,"sort":300},{"id":8252231940841728,"name":"小说","parent":0,"sort":400},{"id":8294189974167808,"name":"Vue1","parent":101,"sort":1011},{"id":8294194955165952,"name":"Vue2","parent":101,"sort":1012},{"id":8294199664320768,"name":"Vue3","parent":101,"sort":1013}],"success":true}
 2022-01-02 12:51:00.828 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：4 ms -------------
+2022-01-02 14:40:05.246 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 14:40:05.248 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/List GET
+2022-01-02 14:40:05.248 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.list
+2022-01-02 14:40:05.248 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 14:40:05.249 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"page":1,"size":1000}]
+2022-01-02 14:40:05.258 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-01-02 14:40:05.259 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 14:40:05.262 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2022-01-02 14:40:05.263 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 7
+2022-01-02 14:40:05.263 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2022-01-02 14:40:05.264 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2022-01-02 14:40:05.264 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 1000(Integer)
+2022-01-02 14:40:05.265 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-01-02 14:40:05.265 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, 11, 3, 零基础入门 Java开发，企业级应用开发最佳首选框架, /image/cover1.png, 4, 5, 6
+2022-01-02 14:40:05.266 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 1, 2, 零基础入门 Vue开发，企业级应用开发最佳首选框架, /image/cover2.png, 34, 23, 5
+2022-01-02 14:40:05.266 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, 1, null, 零基础入门 Python开发，企业级应用开发最佳首选框架, null, null, null, null
+2022-01-02 14:40:05.266 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 4, Oracle 入门教程, 2, 3, null, /image/cover1.png, null, null, null
+2022-01-02 14:40:05.266 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 5, 雪中悍刀行, 3, 4, 打到收服就可以了, null, null, null, null
+2022-01-02 14:40:05.267 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 6, 剑来, 12, 1, null, null, null, null, null
+2022-01-02 14:40:05.267 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 8227331779338496, 斗罗大陆·绝世唐门, 12, 23, null, null, null, null, null
+2022-01-02 14:40:05.267 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 7
+2022-01-02 14:40:05.267 INFO  com.jiawa.wiki.service.EbookService               :50   [32m                  [0;39m 总行数：7
+2022-01-02 14:40:05.267 INFO  com.jiawa.wiki.service.EbookService               :51   [32m                  [0;39m 总页数：1
+2022-01-02 14:40:05.276 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":11,"category2Id":3,"cover":"/image/cover1.png","description":"零基础入门 Java开发，企业级应用开发最佳首选框架","docCount":4,"id":1,"name":"Spring Boot 入门教程","viewCount":5,"voteCount":6},{"category1Id":1,"category2Id":2,"cover":"/image/cover2.png","description":"零基础入门 Vue开发，企业级应用开发最佳首选框架","docCount":34,"id":2,"name":"Vue 入门教程","viewCount":23,"voteCount":5},{"category1Id":1,"description":"零基础入门 Python开发，企业级应用开发最佳首选框架","id":3,"name":"Python 入门教程"},{"category1Id":2,"category2Id":3,"cover":"/image/cover1.png","id":4,"name":"Oracle 入门教程"},{"category1Id":3,"category2Id":4,"description":"打到收服就可以了","id":5,"name":"雪中悍刀行"},{"category1Id":12,"category2Id":1,"id":6,"name":"剑来"},{"category1Id":12,"category2Id":23,"id":8227331779338496,"name":"斗罗大陆·绝世唐门"}],"total":7},"success":true}
+2022-01-02 14:40:05.276 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：30 ms -------------
+2022-01-02 14:40:06.897 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 14:40:06.897 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/category/all GET
+2022-01-02 14:40:06.897 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.CategoryController.all
+2022-01-02 14:40:06.897 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 14:40:06.897 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: []
+2022-01-02 14:40:06.899 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2022-01-02 14:40:06.899 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 14:40:06.900 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2022-01-02 14:40:06.900 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2022-01-02 14:40:06.900 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2022-01-02 14:40:06.900 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 102, 100, HTML&CSS, 102
+2022-01-02 14:40:06.901 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2022-01-02 14:40:06.901 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2022-01-02 14:40:06.901 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8293835229896960, 0, 其他, 300
+2022-01-02 14:40:06.901 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8252231940841728, 0, 小说, 400
+2022-01-02 14:40:06.901 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294189974167808, 101, Vue1, 1011
+2022-01-02 14:40:06.901 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294194955165952, 101, Vue2, 1012
+2022-01-02 14:40:06.901 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294199664320768, 101, Vue3, 1013
+2022-01-02 14:40:06.902 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m <==      Total: 10
+2022-01-02 14:40:06.906 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML&CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":8293835229896960,"name":"其他","parent":0,"sort":300},{"id":8252231940841728,"name":"小说","parent":0,"sort":400},{"id":8294189974167808,"name":"Vue1","parent":101,"sort":1011},{"id":8294194955165952,"name":"Vue2","parent":101,"sort":1012},{"id":8294199664320768,"name":"Vue3","parent":101,"sort":1013}],"success":true}
+2022-01-02 14:40:06.906 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：9 ms -------------
+2022-01-02 14:40:26.430 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 14:40:26.431 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/category/save POST
+2022-01-02 14:40:26.431 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.CategoryController.save
+2022-01-02 14:40:26.431 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 14:40:26.431 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"name":"test","parent":0,"sort":500}]
+2022-01-02 14:40:26.434 DEBUG com.jiawa.wiki.mapper.CategoryMapper.insert       :137  [32m                  [0;39m ==>  Preparing: insert into category (id, parent, `name`, sort) values (?, ?, ?, ?)
+2022-01-02 14:40:26.434 DEBUG com.jiawa.wiki.mapper.CategoryMapper.insert       :137  [32m                  [0;39m ==> Parameters: 8295920811122944(Long), 0(Long), test(String), 500(Integer)
+2022-01-02 14:40:26.441 DEBUG com.jiawa.wiki.mapper.CategoryMapper.insert       :137  [32m                  [0;39m <==    Updates: 1
+2022-01-02 14:40:26.442 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"success":true}
+2022-01-02 14:40:26.442 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：12 ms -------------
+2022-01-02 14:40:26.472 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 14:40:26.473 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/category/all GET
+2022-01-02 14:40:26.473 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.CategoryController.all
+2022-01-02 14:40:26.473 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 14:40:26.473 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: []
+2022-01-02 14:40:26.474 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2022-01-02 14:40:26.474 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 14:40:26.475 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2022-01-02 14:40:26.475 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2022-01-02 14:40:26.475 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2022-01-02 14:40:26.475 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 102, 100, HTML&CSS, 102
+2022-01-02 14:40:26.475 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2022-01-02 14:40:26.476 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2022-01-02 14:40:26.476 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8293835229896960, 0, 其他, 300
+2022-01-02 14:40:26.476 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8252231940841728, 0, 小说, 400
+2022-01-02 14:40:26.476 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8295920811122944, 0, test, 500
+2022-01-02 14:40:26.476 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294189974167808, 101, Vue1, 1011
+2022-01-02 14:40:26.477 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294194955165952, 101, Vue2, 1012
+2022-01-02 14:40:26.477 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294199664320768, 101, Vue3, 1013
+2022-01-02 14:40:26.477 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m <==      Total: 11
+2022-01-02 14:40:26.479 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML&CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":8293835229896960,"name":"其他","parent":0,"sort":300},{"id":8252231940841728,"name":"小说","parent":0,"sort":400},{"id":8295920811122944,"name":"test","parent":0,"sort":500},{"id":8294189974167808,"name":"Vue1","parent":101,"sort":1011},{"id":8294194955165952,"name":"Vue2","parent":101,"sort":1012},{"id":8294199664320768,"name":"Vue3","parent":101,"sort":1013}],"success":true}
+2022-01-02 14:40:26.479 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：7 ms -------------
+2022-01-02 14:40:33.644 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 14:40:33.645 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/category/save POST
+2022-01-02 14:40:33.645 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.CategoryController.save
+2022-01-02 14:40:33.645 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 14:40:33.645 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"id":8295920811122944,"name":"test","parent":100,"sort":500}]
+2022-01-02 14:40:33.646 DEBUG c.j.wiki.mapper.CategoryMapper.updateByPrimaryKey :137  [32m                  [0;39m ==>  Preparing: update category set parent = ?, `name` = ?, sort = ? where id = ?
+2022-01-02 14:40:33.646 DEBUG c.j.wiki.mapper.CategoryMapper.updateByPrimaryKey :137  [32m                  [0;39m ==> Parameters: 100(Long), test(String), 500(Integer), 8295920811122944(Long)
+2022-01-02 14:40:33.650 DEBUG c.j.wiki.mapper.CategoryMapper.updateByPrimaryKey :137  [32m                  [0;39m <==    Updates: 1
+2022-01-02 14:40:33.651 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"success":true}
+2022-01-02 14:40:33.651 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：7 ms -------------
+2022-01-02 14:40:33.684 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 14:40:33.684 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/category/all GET
+2022-01-02 14:40:33.684 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.CategoryController.all
+2022-01-02 14:40:33.685 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 14:40:33.685 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: []
+2022-01-02 14:40:33.685 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2022-01-02 14:40:33.685 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 14:40:33.686 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2022-01-02 14:40:33.686 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2022-01-02 14:40:33.686 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2022-01-02 14:40:33.687 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 102, 100, HTML&CSS, 102
+2022-01-02 14:40:33.687 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2022-01-02 14:40:33.687 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2022-01-02 14:40:33.687 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8293835229896960, 0, 其他, 300
+2022-01-02 14:40:33.687 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8252231940841728, 0, 小说, 400
+2022-01-02 14:40:33.687 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8295920811122944, 100, test, 500
+2022-01-02 14:40:33.687 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294189974167808, 101, Vue1, 1011
+2022-01-02 14:40:33.688 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294194955165952, 101, Vue2, 1012
+2022-01-02 14:40:33.688 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294199664320768, 101, Vue3, 1013
+2022-01-02 14:40:33.688 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m <==      Total: 11
+2022-01-02 14:40:33.689 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML&CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":8293835229896960,"name":"其他","parent":0,"sort":300},{"id":8252231940841728,"name":"小说","parent":0,"sort":400},{"id":8295920811122944,"name":"test","parent":100,"sort":500},{"id":8294189974167808,"name":"Vue1","parent":101,"sort":1011},{"id":8294194955165952,"name":"Vue2","parent":101,"sort":1012},{"id":8294199664320768,"name":"Vue3","parent":101,"sort":1013}],"success":true}
+2022-01-02 14:40:33.689 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：5 ms -------------
+2022-01-02 14:40:38.952 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 14:40:38.952 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/category/delete/8295920811122944 DELETE
+2022-01-02 14:40:38.953 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.CategoryController.delete
+2022-01-02 14:40:38.953 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 14:40:38.953 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [8295920811122944]
+2022-01-02 14:40:38.955 DEBUG c.j.wiki.mapper.CategoryMapper.deleteByPrimaryKey :137  [32m                  [0;39m ==>  Preparing: delete from category where id = ?
+2022-01-02 14:40:38.955 DEBUG c.j.wiki.mapper.CategoryMapper.deleteByPrimaryKey :137  [32m                  [0;39m ==> Parameters: 8295920811122944(Long)
+2022-01-02 14:40:38.960 DEBUG c.j.wiki.mapper.CategoryMapper.deleteByPrimaryKey :137  [32m                  [0;39m <==    Updates: 1
+2022-01-02 14:40:38.961 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"success":true}
+2022-01-02 14:40:38.961 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：9 ms -------------
+2022-01-02 14:40:38.987 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 14:40:38.987 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/category/all GET
+2022-01-02 14:40:38.987 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.CategoryController.all
+2022-01-02 14:40:38.987 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 14:40:38.987 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: []
+2022-01-02 14:40:38.987 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2022-01-02 14:40:38.988 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 14:40:38.989 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2022-01-02 14:40:38.989 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2022-01-02 14:40:38.989 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2022-01-02 14:40:38.989 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 102, 100, HTML&CSS, 102
+2022-01-02 14:40:38.989 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2022-01-02 14:40:38.990 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2022-01-02 14:40:38.990 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8293835229896960, 0, 其他, 300
+2022-01-02 14:40:38.990 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8252231940841728, 0, 小说, 400
+2022-01-02 14:40:38.990 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294189974167808, 101, Vue1, 1011
+2022-01-02 14:40:38.990 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294194955165952, 101, Vue2, 1012
+2022-01-02 14:40:38.990 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294199664320768, 101, Vue3, 1013
+2022-01-02 14:40:38.990 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m <==      Total: 10
+2022-01-02 14:40:38.991 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML&CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":8293835229896960,"name":"其他","parent":0,"sort":300},{"id":8252231940841728,"name":"小说","parent":0,"sort":400},{"id":8294189974167808,"name":"Vue1","parent":101,"sort":1011},{"id":8294194955165952,"name":"Vue2","parent":101,"sort":1012},{"id":8294199664320768,"name":"Vue3","parent":101,"sort":1013}],"success":true}
+2022-01-02 14:40:38.991 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：4 ms -------------
+2022-01-02 14:47:38.933 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 14:47:38.933 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/category/all GET
+2022-01-02 14:47:38.933 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.CategoryController.all
+2022-01-02 14:47:38.933 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 14:47:38.933 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: []
+2022-01-02 14:47:38.934 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2022-01-02 14:47:38.934 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 14:47:38.935 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2022-01-02 14:47:38.935 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2022-01-02 14:47:38.936 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2022-01-02 14:47:38.936 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 102, 100, HTML&CSS, 102
+2022-01-02 14:47:38.936 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2022-01-02 14:47:38.936 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2022-01-02 14:47:38.936 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8293835229896960, 0, 其他, 300
+2022-01-02 14:47:38.937 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8252231940841728, 0, 小说, 400
+2022-01-02 14:47:38.937 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294189974167808, 101, Vue1, 1011
+2022-01-02 14:47:38.938 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294194955165952, 101, Vue2, 1012
+2022-01-02 14:47:38.938 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294199664320768, 101, Vue3, 1013
+2022-01-02 14:47:38.939 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m <==      Total: 10
+2022-01-02 14:47:38.940 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML&CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":8293835229896960,"name":"其他","parent":0,"sort":300},{"id":8252231940841728,"name":"小说","parent":0,"sort":400},{"id":8294189974167808,"name":"Vue1","parent":101,"sort":1011},{"id":8294194955165952,"name":"Vue2","parent":101,"sort":1012},{"id":8294199664320768,"name":"Vue3","parent":101,"sort":1013}],"success":true}
+2022-01-02 14:47:38.940 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：7 ms -------------
+2022-01-02 14:47:43.345 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 14:47:43.345 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/category/all GET
+2022-01-02 14:47:43.345 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.CategoryController.all
+2022-01-02 14:47:43.345 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 14:47:43.345 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: []
+2022-01-02 14:47:43.346 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2022-01-02 14:47:43.346 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 14:47:43.347 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2022-01-02 14:47:43.347 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2022-01-02 14:47:43.348 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2022-01-02 14:47:43.348 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 102, 100, HTML&CSS, 102
+2022-01-02 14:47:43.348 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2022-01-02 14:47:43.348 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2022-01-02 14:47:43.349 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8293835229896960, 0, 其他, 300
+2022-01-02 14:47:43.349 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8252231940841728, 0, 小说, 400
+2022-01-02 14:47:43.349 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294189974167808, 101, Vue1, 1011
+2022-01-02 14:47:43.350 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294194955165952, 101, Vue2, 1012
+2022-01-02 14:47:43.350 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294199664320768, 101, Vue3, 1013
+2022-01-02 14:47:43.350 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m <==      Total: 10
+2022-01-02 14:47:43.351 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML&CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":8293835229896960,"name":"其他","parent":0,"sort":300},{"id":8252231940841728,"name":"小说","parent":0,"sort":400},{"id":8294189974167808,"name":"Vue1","parent":101,"sort":1011},{"id":8294194955165952,"name":"Vue2","parent":101,"sort":1012},{"id":8294199664320768,"name":"Vue3","parent":101,"sort":1013}],"success":true}
+2022-01-02 14:47:43.351 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：6 ms -------------
+2022-01-02 14:47:51.925 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 14:47:51.925 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/category/all GET
+2022-01-02 14:47:51.926 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.CategoryController.all
+2022-01-02 14:47:51.926 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 14:47:51.926 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: []
+2022-01-02 14:47:51.926 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2022-01-02 14:47:51.927 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 14:47:51.927 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2022-01-02 14:47:51.927 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2022-01-02 14:47:51.928 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2022-01-02 14:47:51.928 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 102, 100, HTML&CSS, 102
+2022-01-02 14:47:51.928 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2022-01-02 14:47:51.928 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2022-01-02 14:47:51.928 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8293835229896960, 0, 其他, 300
+2022-01-02 14:47:51.929 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8252231940841728, 0, 小说, 400
+2022-01-02 14:47:51.929 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294189974167808, 101, Vue1, 1011
+2022-01-02 14:47:51.929 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294194955165952, 101, Vue2, 1012
+2022-01-02 14:47:51.929 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294199664320768, 101, Vue3, 1013
+2022-01-02 14:47:51.929 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m <==      Total: 10
+2022-01-02 14:47:51.931 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML&CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":8293835229896960,"name":"其他","parent":0,"sort":300},{"id":8252231940841728,"name":"小说","parent":0,"sort":400},{"id":8294189974167808,"name":"Vue1","parent":101,"sort":1011},{"id":8294194955165952,"name":"Vue2","parent":101,"sort":1012},{"id":8294199664320768,"name":"Vue3","parent":101,"sort":1013}],"success":true}
+2022-01-02 14:47:51.931 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：6 ms -------------
+2022-01-02 14:49:10.938 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 14:49:10.938 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/category/save POST
+2022-01-02 14:49:10.939 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.CategoryController.save
+2022-01-02 14:49:10.939 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 14:49:10.939 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"name":"test","parent":0,"sort":500}]
+2022-01-02 14:49:10.939 DEBUG com.jiawa.wiki.mapper.CategoryMapper.insert       :137  [32m                  [0;39m ==>  Preparing: insert into category (id, parent, `name`, sort) values (?, ?, ?, ?)
+2022-01-02 14:49:10.940 DEBUG com.jiawa.wiki.mapper.CategoryMapper.insert       :137  [32m                  [0;39m ==> Parameters: 8296058306961664(Long), 0(Long), test(String), 500(Integer)
+2022-01-02 14:49:10.944 DEBUG com.jiawa.wiki.mapper.CategoryMapper.insert       :137  [32m                  [0;39m <==    Updates: 1
+2022-01-02 14:49:10.944 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"success":true}
+2022-01-02 14:49:10.944 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：6 ms -------------
+2022-01-02 14:49:10.990 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 14:49:10.991 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/category/all GET
+2022-01-02 14:49:10.991 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.CategoryController.all
+2022-01-02 14:49:10.991 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 14:49:10.991 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: []
+2022-01-02 14:49:10.991 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2022-01-02 14:49:10.992 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 14:49:10.992 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2022-01-02 14:49:10.993 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2022-01-02 14:49:10.993 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2022-01-02 14:49:10.993 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 102, 100, HTML&CSS, 102
+2022-01-02 14:49:10.993 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2022-01-02 14:49:10.993 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2022-01-02 14:49:10.993 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8293835229896960, 0, 其他, 300
+2022-01-02 14:49:10.994 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8252231940841728, 0, 小说, 400
+2022-01-02 14:49:10.994 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8296058306961664, 0, test, 500
+2022-01-02 14:49:10.994 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294189974167808, 101, Vue1, 1011
+2022-01-02 14:49:10.994 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294194955165952, 101, Vue2, 1012
+2022-01-02 14:49:10.994 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294199664320768, 101, Vue3, 1013
+2022-01-02 14:49:10.994 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m <==      Total: 11
+2022-01-02 14:49:10.995 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML&CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":8293835229896960,"name":"其他","parent":0,"sort":300},{"id":8252231940841728,"name":"小说","parent":0,"sort":400},{"id":8296058306961664,"name":"test","parent":0,"sort":500},{"id":8294189974167808,"name":"Vue1","parent":101,"sort":1011},{"id":8294194955165952,"name":"Vue2","parent":101,"sort":1012},{"id":8294199664320768,"name":"Vue3","parent":101,"sort":1013}],"success":true}
+2022-01-02 14:49:10.995 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：5 ms -------------
+2022-01-02 14:49:38.917 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 14:49:38.918 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/category/save POST
+2022-01-02 14:49:38.918 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.CategoryController.save
+2022-01-02 14:49:38.918 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 14:49:38.918 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"id":8296058306961664,"name":"test","parent":400,"sort":500}]
+2022-01-02 14:49:38.919 DEBUG c.j.wiki.mapper.CategoryMapper.updateByPrimaryKey :137  [32m                  [0;39m ==>  Preparing: update category set parent = ?, `name` = ?, sort = ? where id = ?
+2022-01-02 14:49:38.920 DEBUG c.j.wiki.mapper.CategoryMapper.updateByPrimaryKey :137  [32m                  [0;39m ==> Parameters: 400(Long), test(String), 500(Integer), 8296058306961664(Long)
+2022-01-02 14:49:38.925 DEBUG c.j.wiki.mapper.CategoryMapper.updateByPrimaryKey :137  [32m                  [0;39m <==    Updates: 1
+2022-01-02 14:49:38.925 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"success":true}
+2022-01-02 14:49:38.925 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：8 ms -------------
+2022-01-02 14:49:38.969 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 14:49:38.969 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/category/all GET
+2022-01-02 14:49:38.970 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.CategoryController.all
+2022-01-02 14:49:38.970 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 14:49:38.970 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: []
+2022-01-02 14:49:38.970 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2022-01-02 14:49:38.971 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 14:49:38.971 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2022-01-02 14:49:38.972 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2022-01-02 14:49:38.972 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2022-01-02 14:49:38.972 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 102, 100, HTML&CSS, 102
+2022-01-02 14:49:38.973 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2022-01-02 14:49:38.973 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2022-01-02 14:49:38.973 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8293835229896960, 0, 其他, 300
+2022-01-02 14:49:38.973 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8252231940841728, 0, 小说, 400
+2022-01-02 14:49:38.973 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8296058306961664, 400, test, 500
+2022-01-02 14:49:38.973 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294189974167808, 101, Vue1, 1011
+2022-01-02 14:49:38.973 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294194955165952, 101, Vue2, 1012
+2022-01-02 14:49:38.973 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294199664320768, 101, Vue3, 1013
+2022-01-02 14:49:38.973 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m <==      Total: 11
+2022-01-02 14:49:38.974 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML&CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":8293835229896960,"name":"其他","parent":0,"sort":300},{"id":8252231940841728,"name":"小说","parent":0,"sort":400},{"id":8296058306961664,"name":"test","parent":400,"sort":500},{"id":8294189974167808,"name":"Vue1","parent":101,"sort":1011},{"id":8294194955165952,"name":"Vue2","parent":101,"sort":1012},{"id":8294199664320768,"name":"Vue3","parent":101,"sort":1013}],"success":true}
+2022-01-02 14:49:38.974 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：5 ms -------------
+2022-01-02 14:50:35.057 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 14:50:35.058 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/category/all GET
+2022-01-02 14:50:35.058 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.CategoryController.all
+2022-01-02 14:50:35.058 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 14:50:35.058 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: []
+2022-01-02 14:50:35.059 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2022-01-02 14:50:35.059 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 14:50:35.061 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2022-01-02 14:50:35.061 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2022-01-02 14:50:35.061 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2022-01-02 14:50:35.061 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 102, 100, HTML&CSS, 102
+2022-01-02 14:50:35.061 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2022-01-02 14:50:35.061 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2022-01-02 14:50:35.061 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8293835229896960, 0, 其他, 300
+2022-01-02 14:50:35.062 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8252231940841728, 0, 小说, 400
+2022-01-02 14:50:35.062 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8296058306961664, 100, test, 500
+2022-01-02 14:50:35.062 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294189974167808, 101, Vue1, 1011
+2022-01-02 14:50:35.062 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294194955165952, 101, Vue2, 1012
+2022-01-02 14:50:35.062 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294199664320768, 101, Vue3, 1013
+2022-01-02 14:50:35.062 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m <==      Total: 11
+2022-01-02 14:50:35.063 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML&CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":8293835229896960,"name":"其他","parent":0,"sort":300},{"id":8252231940841728,"name":"小说","parent":0,"sort":400},{"id":8296058306961664,"name":"test","parent":100,"sort":500},{"id":8294189974167808,"name":"Vue1","parent":101,"sort":1011},{"id":8294194955165952,"name":"Vue2","parent":101,"sort":1012},{"id":8294199664320768,"name":"Vue3","parent":101,"sort":1013}],"success":true}
+2022-01-02 14:50:35.063 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：6 ms -------------
+2022-01-02 14:50:38.907 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 14:50:38.908 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/category/delete/8296058306961664 DELETE
+2022-01-02 14:50:38.908 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.CategoryController.delete
+2022-01-02 14:50:38.908 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 14:50:38.908 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [8296058306961664]
+2022-01-02 14:50:38.909 DEBUG c.j.wiki.mapper.CategoryMapper.deleteByPrimaryKey :137  [32m                  [0;39m ==>  Preparing: delete from category where id = ?
+2022-01-02 14:50:38.909 DEBUG c.j.wiki.mapper.CategoryMapper.deleteByPrimaryKey :137  [32m                  [0;39m ==> Parameters: 8296058306961664(Long)
+2022-01-02 14:50:38.916 DEBUG c.j.wiki.mapper.CategoryMapper.deleteByPrimaryKey :137  [32m                  [0;39m <==    Updates: 1
+2022-01-02 14:50:38.916 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"success":true}
+2022-01-02 14:50:38.916 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：9 ms -------------
+2022-01-02 14:50:38.944 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 14:50:38.944 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/category/all GET
+2022-01-02 14:50:38.944 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.CategoryController.all
+2022-01-02 14:50:38.944 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 14:50:38.944 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: []
+2022-01-02 14:50:38.945 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2022-01-02 14:50:38.945 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 14:50:38.946 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2022-01-02 14:50:38.946 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2022-01-02 14:50:38.946 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2022-01-02 14:50:38.946 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 102, 100, HTML&CSS, 102
+2022-01-02 14:50:38.946 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2022-01-02 14:50:38.946 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2022-01-02 14:50:38.947 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8293835229896960, 0, 其他, 300
+2022-01-02 14:50:38.947 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8252231940841728, 0, 小说, 400
+2022-01-02 14:50:38.947 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294189974167808, 101, Vue1, 1011
+2022-01-02 14:50:38.947 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294194955165952, 101, Vue2, 1012
+2022-01-02 14:50:38.947 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294199664320768, 101, Vue3, 1013
+2022-01-02 14:50:38.947 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m <==      Total: 10
+2022-01-02 14:50:38.948 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML&CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":8293835229896960,"name":"其他","parent":0,"sort":300},{"id":8252231940841728,"name":"小说","parent":0,"sort":400},{"id":8294189974167808,"name":"Vue1","parent":101,"sort":1011},{"id":8294194955165952,"name":"Vue2","parent":101,"sort":1012},{"id":8294199664320768,"name":"Vue3","parent":101,"sort":1013}],"success":true}
+2022-01-02 14:50:38.948 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：4 ms -------------
+2022-01-02 14:52:48.395 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 14:52:48.395 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/category/all GET
+2022-01-02 14:52:48.395 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.CategoryController.all
+2022-01-02 14:52:48.395 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 14:52:48.396 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: []
+2022-01-02 14:52:48.397 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2022-01-02 14:52:48.397 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 14:52:48.398 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2022-01-02 14:52:48.398 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2022-01-02 14:52:48.398 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2022-01-02 14:52:48.398 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 102, 100, HTML&CSS, 102
+2022-01-02 14:52:48.398 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2022-01-02 14:52:48.398 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2022-01-02 14:52:48.398 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8293835229896960, 0, 其他, 300
+2022-01-02 14:52:48.398 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8252231940841728, 0, 小说, 400
+2022-01-02 14:52:48.398 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294189974167808, 101, Vue1, 1011
+2022-01-02 14:52:48.399 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294194955165952, 101, Vue2, 1012
+2022-01-02 14:52:48.399 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294199664320768, 101, Vue3, 1013
+2022-01-02 14:52:48.399 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m <==      Total: 10
+2022-01-02 14:52:48.399 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML&CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":8293835229896960,"name":"其他","parent":0,"sort":300},{"id":8252231940841728,"name":"小说","parent":0,"sort":400},{"id":8294189974167808,"name":"Vue1","parent":101,"sort":1011},{"id":8294194955165952,"name":"Vue2","parent":101,"sort":1012},{"id":8294199664320768,"name":"Vue3","parent":101,"sort":1013}],"success":true}
+2022-01-02 14:52:48.399 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：4 ms -------------
+2022-01-02 14:53:11.974 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 14:53:11.974 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/category/all GET
+2022-01-02 14:53:11.974 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.CategoryController.all
+2022-01-02 14:53:11.974 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 14:53:11.974 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: []
+2022-01-02 14:53:11.975 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2022-01-02 14:53:11.975 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 14:53:11.976 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2022-01-02 14:53:11.976 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2022-01-02 14:53:11.976 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2022-01-02 14:53:11.976 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 102, 100, HTML&CSS, 102
+2022-01-02 14:53:11.976 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2022-01-02 14:53:11.976 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2022-01-02 14:53:11.977 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8293835229896960, 0, 其他, 300
+2022-01-02 14:53:11.977 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8252231940841728, 0, 小说, 400
+2022-01-02 14:53:11.977 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294189974167808, 101, Vue1, 1011
+2022-01-02 14:53:11.977 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294194955165952, 101, Vue2, 1012
+2022-01-02 14:53:11.977 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294199664320768, 101, Vue3, 1013
+2022-01-02 14:53:11.977 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m <==      Total: 10
+2022-01-02 14:53:11.978 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML&CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":8293835229896960,"name":"其他","parent":0,"sort":300},{"id":8252231940841728,"name":"小说","parent":0,"sort":400},{"id":8294189974167808,"name":"Vue1","parent":101,"sort":1011},{"id":8294194955165952,"name":"Vue2","parent":101,"sort":1012},{"id":8294199664320768,"name":"Vue3","parent":101,"sort":1013}],"success":true}
+2022-01-02 14:53:11.978 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：4 ms -------------
+2022-01-02 14:56:34.543 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2022-01-02 14:56:34.548 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2022-01-02 21:55:21.500 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2022-01-02 21:55:21.512 INFO  com.jiawa.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 17.0.1 on DESKTOP-8V065KT with PID 18896 (E:\程序\Java\wiki\wiki\target\classes started by Undefeated604 in E:\程序\Java\wiki\wiki)
+2022-01-02 21:55:21.513 INFO  com.jiawa.wiki.config.WikiApplication             :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-01-02 21:55:21.564 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-02 21:55:21.564 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-02 21:55:22.523 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8085 (http)
+2022-01-02 21:55:22.529 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8085"]
+2022-01-02 21:55:22.529 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-01-02 21:55:22.529 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-01-02 21:55:22.579 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-01-02 21:55:22.579 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1014 ms
+2022-01-02 21:55:23.286 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-01-02 21:55:23.299 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8085"]
+2022-01-02 21:55:23.333 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8085 (http) with context path ''
+2022-01-02 21:55:23.347 INFO  com.jiawa.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 2.224 seconds (JVM running for 2.915)
+2022-01-02 21:55:23.349 INFO  com.jiawa.wiki.config.WikiApplication             :26   [32m                  [0;39m 启动成功！！
+2022-01-02 21:55:23.349 INFO  com.jiawa.wiki.config.WikiApplication             :27   [32m                  [0;39m 地址：	http：//127.0.0.1:8085
