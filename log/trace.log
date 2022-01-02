@@ -1532,3 +1532,490 @@
 2022-01-02 22:27:53.172 INFO  com.jiawa.wiki.service.EbookService               :51   [32m                  [0;39m 总页数：2
 2022-01-02 22:27:53.172 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":11,"category2Id":3,"cover":"/image/cover1.png","description":"零基础入门 Java开发，企业级应用开发最佳首选框架","docCount":4,"id":1,"name":"Spring Boot 入门教程","viewCount":5,"voteCount":6},{"category1Id":1,"category2Id":2,"cover":"/image/cover2.png","description":"零基础入门 Vue开发，企业级应用开发最佳首选框架","docCount":34,"id":2,"name":"Vue 入门教程","viewCount":23,"voteCount":5},{"category1Id":100,"category2Id":101,"description":"零基础入门 Python开发，企业级应用开发最佳首选框架","id":3,"name":"Python 入门教程"},{"category1Id":2,"category2Id":3,"cover":"/image/cover1.png","id":4,"name":"Oracle 入门教程"}],"total":7},"success":true}
 2022-01-02 22:27:53.172 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：5 ms -------------
+2022-01-02 22:31:40.112 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:31:40.112 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/category/all GET
+2022-01-02 22:31:40.113 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.CategoryController.all
+2022-01-02 22:31:40.113 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:31:40.113 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:31:40.113 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/List GET
+2022-01-02 22:31:40.113 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: []
+2022-01-02 22:31:40.113 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.list
+2022-01-02 22:31:40.113 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:31:40.113 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"page":1,"size":4}]
+2022-01-02 22:31:40.114 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2022-01-02 22:31:40.114 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 22:31:40.115 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-01-02 22:31:40.115 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 22:31:40.116 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2022-01-02 22:31:40.116 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2022-01-02 22:31:40.117 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2022-01-02 22:31:40.117 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2022-01-02 22:31:40.118 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 7
+2022-01-02 22:31:40.118 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 102, 100, HTML&CSS, 102
+2022-01-02 22:31:40.119 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2022-01-02 22:31:40.119 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2022-01-02 22:31:40.120 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2022-01-02 22:31:40.120 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2022-01-02 22:31:40.120 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8293835229896960, 0, 其他, 300
+2022-01-02 22:31:40.121 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8252231940841728, 0, 小说, 400
+2022-01-02 22:31:40.121 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 4(Integer)
+2022-01-02 22:31:40.122 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294189974167808, 101, Vue1, 1011
+2022-01-02 22:31:40.122 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294194955165952, 101, Vue2, 1012
+2022-01-02 22:31:40.122 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294199664320768, 101, Vue3, 1013
+2022-01-02 22:31:40.122 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m <==      Total: 10
+2022-01-02 22:31:40.122 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-01-02 22:31:40.122 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, 11, 3, 零基础入门 Java开发，企业级应用开发最佳首选框架, /image/cover1.png, 4, 5, 6
+2022-01-02 22:31:40.123 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 1, 2, 零基础入门 Vue开发，企业级应用开发最佳首选框架, /image/cover2.png, 34, 23, 5
+2022-01-02 22:31:40.123 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML&CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":8293835229896960,"name":"其他","parent":0,"sort":300},{"id":8252231940841728,"name":"小说","parent":0,"sort":400},{"id":8294189974167808,"name":"Vue1","parent":101,"sort":1011},{"id":8294194955165952,"name":"Vue2","parent":101,"sort":1012},{"id":8294199664320768,"name":"Vue3","parent":101,"sort":1013}],"success":true}
+2022-01-02 22:31:40.123 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：11 ms -------------
+2022-01-02 22:31:40.123 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, 100, 101, 零基础入门 Python开发，企业级应用开发最佳首选框架, null, null, null, null
+2022-01-02 22:31:40.123 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 4, Oracle 入门教程, 2, 3, null, /image/cover1.png, null, null, null
+2022-01-02 22:31:40.123 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 4
+2022-01-02 22:31:40.123 INFO  com.jiawa.wiki.service.EbookService               :50   [32m                  [0;39m 总行数：7
+2022-01-02 22:31:40.124 INFO  com.jiawa.wiki.service.EbookService               :51   [32m                  [0;39m 总页数：2
+2022-01-02 22:31:40.124 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":11,"category2Id":3,"cover":"/image/cover1.png","description":"零基础入门 Java开发，企业级应用开发最佳首选框架","docCount":4,"id":1,"name":"Spring Boot 入门教程","viewCount":5,"voteCount":6},{"category1Id":1,"category2Id":2,"cover":"/image/cover2.png","description":"零基础入门 Vue开发，企业级应用开发最佳首选框架","docCount":34,"id":2,"name":"Vue 入门教程","viewCount":23,"voteCount":5},{"category1Id":100,"category2Id":101,"description":"零基础入门 Python开发，企业级应用开发最佳首选框架","id":3,"name":"Python 入门教程"},{"category1Id":2,"category2Id":3,"cover":"/image/cover1.png","id":4,"name":"Oracle 入门教程"}],"total":7},"success":true}
+2022-01-02 22:31:40.124 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：11 ms -------------
+2022-01-02 22:31:44.066 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:31:44.066 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/save POST
+2022-01-02 22:31:44.066 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.save
+2022-01-02 22:31:44.067 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:31:44.067 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"category1Id":11,"category2Id":3,"cover":"/image/cover1.png","description":"零基础入门 Java开发，企业级应用开发最佳首选框架","docCount":4,"id":1,"name":"Spring Boot 入门教程1","viewCount":5,"voteCount":6}]
+2022-01-02 22:31:44.070 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==>  Preparing: update ebook set `name` = ?, category1_id = ?, category2_id = ?, description = ?, cover = ?, doc_count = ?, view_count = ?, vote_count = ? where id = ?
+2022-01-02 22:31:44.071 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==> Parameters: Spring Boot 入门教程1(String), 11(Long), 3(Long), 零基础入门 Java开发，企业级应用开发最佳首选框架(String), /image/cover1.png(String), 4(Integer), 5(Integer), 6(Integer), 1(Long)
+2022-01-02 22:31:44.077 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m <==    Updates: 1
+2022-01-02 22:31:44.077 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"success":true}
+2022-01-02 22:31:44.077 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：11 ms -------------
+2022-01-02 22:31:44.108 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:31:44.108 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/List GET
+2022-01-02 22:31:44.108 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.list
+2022-01-02 22:31:44.108 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:31:44.108 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"page":1,"size":4}]
+2022-01-02 22:31:44.110 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-01-02 22:31:44.110 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 22:31:44.112 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2022-01-02 22:31:44.112 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 7
+2022-01-02 22:31:44.112 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2022-01-02 22:31:44.113 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2022-01-02 22:31:44.113 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 4(Integer)
+2022-01-02 22:31:44.114 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-01-02 22:31:44.115 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程1, 11, 3, 零基础入门 Java开发，企业级应用开发最佳首选框架, /image/cover1.png, 4, 5, 6
+2022-01-02 22:31:44.115 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 1, 2, 零基础入门 Vue开发，企业级应用开发最佳首选框架, /image/cover2.png, 34, 23, 5
+2022-01-02 22:31:44.115 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, 100, 101, 零基础入门 Python开发，企业级应用开发最佳首选框架, null, null, null, null
+2022-01-02 22:31:44.116 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 4, Oracle 入门教程, 2, 3, null, /image/cover1.png, null, null, null
+2022-01-02 22:31:44.116 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 4
+2022-01-02 22:31:44.116 INFO  com.jiawa.wiki.service.EbookService               :50   [32m                  [0;39m 总行数：7
+2022-01-02 22:31:44.116 INFO  com.jiawa.wiki.service.EbookService               :51   [32m                  [0;39m 总页数：2
+2022-01-02 22:31:44.117 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":11,"category2Id":3,"cover":"/image/cover1.png","description":"零基础入门 Java开发，企业级应用开发最佳首选框架","docCount":4,"id":1,"name":"Spring Boot 入门教程1","viewCount":5,"voteCount":6},{"category1Id":1,"category2Id":2,"cover":"/image/cover2.png","description":"零基础入门 Vue开发，企业级应用开发最佳首选框架","docCount":34,"id":2,"name":"Vue 入门教程","viewCount":23,"voteCount":5},{"category1Id":100,"category2Id":101,"description":"零基础入门 Python开发，企业级应用开发最佳首选框架","id":3,"name":"Python 入门教程"},{"category1Id":2,"category2Id":3,"cover":"/image/cover1.png","id":4,"name":"Oracle 入门教程"}],"total":7},"success":true}
+2022-01-02 22:31:44.117 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：9 ms -------------
+2022-01-02 22:31:48.245 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:31:48.246 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/save POST
+2022-01-02 22:31:48.246 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.save
+2022-01-02 22:31:48.246 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:31:48.246 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"category1Id":11,"category2Id":3,"cover":"/image/cover1.png","description":"零基础入门 Java开发，企业级应用开发最佳首选框架","docCount":4,"id":1,"name":"Spring Boot 入门教程","viewCount":5,"voteCount":6}]
+2022-01-02 22:31:48.247 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==>  Preparing: update ebook set `name` = ?, category1_id = ?, category2_id = ?, description = ?, cover = ?, doc_count = ?, view_count = ?, vote_count = ? where id = ?
+2022-01-02 22:31:48.248 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==> Parameters: Spring Boot 入门教程(String), 11(Long), 3(Long), 零基础入门 Java开发，企业级应用开发最佳首选框架(String), /image/cover1.png(String), 4(Integer), 5(Integer), 6(Integer), 1(Long)
+2022-01-02 22:31:48.253 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m <==    Updates: 1
+2022-01-02 22:31:48.253 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"success":true}
+2022-01-02 22:31:48.253 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：8 ms -------------
+2022-01-02 22:31:48.285 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:31:48.285 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/List GET
+2022-01-02 22:31:48.285 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.list
+2022-01-02 22:31:48.285 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:31:48.285 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"page":1,"size":4}]
+2022-01-02 22:31:48.287 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-01-02 22:31:48.287 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 22:31:48.288 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2022-01-02 22:31:48.289 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 7
+2022-01-02 22:31:48.289 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2022-01-02 22:31:48.291 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2022-01-02 22:31:48.291 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 4(Integer)
+2022-01-02 22:31:48.293 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-01-02 22:31:48.293 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, 11, 3, 零基础入门 Java开发，企业级应用开发最佳首选框架, /image/cover1.png, 4, 5, 6
+2022-01-02 22:31:48.293 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 1, 2, 零基础入门 Vue开发，企业级应用开发最佳首选框架, /image/cover2.png, 34, 23, 5
+2022-01-02 22:31:48.293 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, 100, 101, 零基础入门 Python开发，企业级应用开发最佳首选框架, null, null, null, null
+2022-01-02 22:31:48.294 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 4, Oracle 入门教程, 2, 3, null, /image/cover1.png, null, null, null
+2022-01-02 22:31:48.294 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 4
+2022-01-02 22:31:48.294 INFO  com.jiawa.wiki.service.EbookService               :50   [32m                  [0;39m 总行数：7
+2022-01-02 22:31:48.294 INFO  com.jiawa.wiki.service.EbookService               :51   [32m                  [0;39m 总页数：2
+2022-01-02 22:31:48.295 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":11,"category2Id":3,"cover":"/image/cover1.png","description":"零基础入门 Java开发，企业级应用开发最佳首选框架","docCount":4,"id":1,"name":"Spring Boot 入门教程","viewCount":5,"voteCount":6},{"category1Id":1,"category2Id":2,"cover":"/image/cover2.png","description":"零基础入门 Vue开发，企业级应用开发最佳首选框架","docCount":34,"id":2,"name":"Vue 入门教程","viewCount":23,"voteCount":5},{"category1Id":100,"category2Id":101,"description":"零基础入门 Python开发，企业级应用开发最佳首选框架","id":3,"name":"Python 入门教程"},{"category1Id":2,"category2Id":3,"cover":"/image/cover1.png","id":4,"name":"Oracle 入门教程"}],"total":7},"success":true}
+2022-01-02 22:31:48.295 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：10 ms -------------
+2022-01-02 22:32:30.645 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:32:30.645 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:32:30.645 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/category/all GET
+2022-01-02 22:32:30.645 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/List GET
+2022-01-02 22:32:30.646 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.list
+2022-01-02 22:32:30.646 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.CategoryController.all
+2022-01-02 22:32:30.646 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:32:30.646 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:32:30.646 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"page":1,"size":4}]
+2022-01-02 22:32:30.646 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: []
+2022-01-02 22:32:30.647 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2022-01-02 22:32:30.647 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 22:32:30.647 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-01-02 22:32:30.648 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 22:32:30.648 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2022-01-02 22:32:30.648 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2022-01-02 22:32:30.648 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2022-01-02 22:32:30.648 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 102, 100, HTML&CSS, 102
+2022-01-02 22:32:30.648 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2022-01-02 22:32:30.649 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2022-01-02 22:32:30.649 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 7
+2022-01-02 22:32:30.649 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2022-01-02 22:32:30.649 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2022-01-02 22:32:30.649 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8293835229896960, 0, 其他, 300
+2022-01-02 22:32:30.649 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8252231940841728, 0, 小说, 400
+2022-01-02 22:32:30.649 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2022-01-02 22:32:30.649 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294189974167808, 101, Vue1, 1011
+2022-01-02 22:32:30.649 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294194955165952, 101, Vue2, 1012
+2022-01-02 22:32:30.650 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 4(Integer)
+2022-01-02 22:32:30.650 TRACE c.jiawa.wiki.mapper.CategoryMapper.selectByExample:143  [32m                  [0;39m <==        Row: 8294199664320768, 101, Vue3, 1013
+2022-01-02 22:32:30.650 DEBUG c.jiawa.wiki.mapper.CategoryMapper.selectByExample:137  [32m                  [0;39m <==      Total: 10
+2022-01-02 22:32:30.651 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML&CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":8293835229896960,"name":"其他","parent":0,"sort":300},{"id":8252231940841728,"name":"小说","parent":0,"sort":400},{"id":8294189974167808,"name":"Vue1","parent":101,"sort":1011},{"id":8294194955165952,"name":"Vue2","parent":101,"sort":1012},{"id":8294199664320768,"name":"Vue3","parent":101,"sort":1013}],"success":true}
+2022-01-02 22:32:30.651 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：6 ms -------------
+2022-01-02 22:32:30.651 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-01-02 22:32:30.651 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, 11, 3, 零基础入门 Java开发，企业级应用开发最佳首选框架, /image/cover1.png, 4, 5, 6
+2022-01-02 22:32:30.652 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 1, 2, 零基础入门 Vue开发，企业级应用开发最佳首选框架, /image/cover2.png, 34, 23, 5
+2022-01-02 22:32:30.652 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, 100, 101, 零基础入门 Python开发，企业级应用开发最佳首选框架, null, null, null, null
+2022-01-02 22:32:30.652 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 4, Oracle 入门教程, 2, 3, null, /image/cover1.png, null, null, null
+2022-01-02 22:32:30.652 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 4
+2022-01-02 22:32:30.653 INFO  com.jiawa.wiki.service.EbookService               :50   [32m                  [0;39m 总行数：7
+2022-01-02 22:32:30.653 INFO  com.jiawa.wiki.service.EbookService               :51   [32m                  [0;39m 总页数：2
+2022-01-02 22:32:30.654 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":11,"category2Id":3,"cover":"/image/cover1.png","description":"零基础入门 Java开发，企业级应用开发最佳首选框架","docCount":4,"id":1,"name":"Spring Boot 入门教程","viewCount":5,"voteCount":6},{"category1Id":1,"category2Id":2,"cover":"/image/cover2.png","description":"零基础入门 Vue开发，企业级应用开发最佳首选框架","docCount":34,"id":2,"name":"Vue 入门教程","viewCount":23,"voteCount":5},{"category1Id":100,"category2Id":101,"description":"零基础入门 Python开发，企业级应用开发最佳首选框架","id":3,"name":"Python 入门教程"},{"category1Id":2,"category2Id":3,"cover":"/image/cover1.png","id":4,"name":"Oracle 入门教程"}],"total":7},"success":true}
+2022-01-02 22:32:30.654 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：9 ms -------------
+2022-01-02 22:32:38.381 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:32:38.381 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/save POST
+2022-01-02 22:32:38.381 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.save
+2022-01-02 22:32:38.382 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:32:38.382 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"category1Id":11,"category2Id":3,"cover":"/image/cover1.png","description":"零基础入门 Java开发，企业级应用开发最佳首选框架","docCount":4,"id":1,"name":"Spring Boot 入门教程1","viewCount":5,"voteCount":6}]
+2022-01-02 22:32:38.382 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==>  Preparing: update ebook set `name` = ?, category1_id = ?, category2_id = ?, description = ?, cover = ?, doc_count = ?, view_count = ?, vote_count = ? where id = ?
+2022-01-02 22:32:38.383 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==> Parameters: Spring Boot 入门教程1(String), 11(Long), 3(Long), 零基础入门 Java开发，企业级应用开发最佳首选框架(String), /image/cover1.png(String), 4(Integer), 5(Integer), 6(Integer), 1(Long)
+2022-01-02 22:32:38.388 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m <==    Updates: 1
+2022-01-02 22:32:38.389 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"success":true}
+2022-01-02 22:32:38.389 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：8 ms -------------
+2022-01-02 22:32:38.409 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:32:38.409 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/List GET
+2022-01-02 22:32:38.409 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.list
+2022-01-02 22:32:38.409 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:32:38.409 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"page":1,"size":4}]
+2022-01-02 22:32:38.410 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-01-02 22:32:38.410 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 22:32:38.411 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2022-01-02 22:32:38.411 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 7
+2022-01-02 22:32:38.412 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2022-01-02 22:32:38.412 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2022-01-02 22:32:38.412 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 4(Integer)
+2022-01-02 22:32:38.413 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-01-02 22:32:38.413 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程1, 11, 3, 零基础入门 Java开发，企业级应用开发最佳首选框架, /image/cover1.png, 4, 5, 6
+2022-01-02 22:32:38.414 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 1, 2, 零基础入门 Vue开发，企业级应用开发最佳首选框架, /image/cover2.png, 34, 23, 5
+2022-01-02 22:32:38.414 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, 100, 101, 零基础入门 Python开发，企业级应用开发最佳首选框架, null, null, null, null
+2022-01-02 22:32:38.414 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 4, Oracle 入门教程, 2, 3, null, /image/cover1.png, null, null, null
+2022-01-02 22:32:38.414 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 4
+2022-01-02 22:32:38.414 INFO  com.jiawa.wiki.service.EbookService               :50   [32m                  [0;39m 总行数：7
+2022-01-02 22:32:38.414 INFO  com.jiawa.wiki.service.EbookService               :51   [32m                  [0;39m 总页数：2
+2022-01-02 22:32:38.415 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":11,"category2Id":3,"cover":"/image/cover1.png","description":"零基础入门 Java开发，企业级应用开发最佳首选框架","docCount":4,"id":1,"name":"Spring Boot 入门教程1","viewCount":5,"voteCount":6},{"category1Id":1,"category2Id":2,"cover":"/image/cover2.png","description":"零基础入门 Vue开发，企业级应用开发最佳首选框架","docCount":34,"id":2,"name":"Vue 入门教程","viewCount":23,"voteCount":5},{"category1Id":100,"category2Id":101,"description":"零基础入门 Python开发，企业级应用开发最佳首选框架","id":3,"name":"Python 入门教程"},{"category1Id":2,"category2Id":3,"cover":"/image/cover1.png","id":4,"name":"Oracle 入门教程"}],"total":7},"success":true}
+2022-01-02 22:32:38.415 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：6 ms -------------
+2022-01-02 22:32:42.708 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:32:42.708 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/save POST
+2022-01-02 22:32:42.708 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.save
+2022-01-02 22:32:42.708 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:32:42.709 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"category1Id":11,"category2Id":3,"cover":"/image/cover1.png","description":"零基础入门 Java开发，企业级应用开发最佳首选框架","docCount":4,"id":1,"name":"Spring Boot 入门教程","viewCount":5,"voteCount":6}]
+2022-01-02 22:32:42.709 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==>  Preparing: update ebook set `name` = ?, category1_id = ?, category2_id = ?, description = ?, cover = ?, doc_count = ?, view_count = ?, vote_count = ? where id = ?
+2022-01-02 22:32:42.710 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==> Parameters: Spring Boot 入门教程(String), 11(Long), 3(Long), 零基础入门 Java开发，企业级应用开发最佳首选框架(String), /image/cover1.png(String), 4(Integer), 5(Integer), 6(Integer), 1(Long)
+2022-01-02 22:32:42.716 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m <==    Updates: 1
+2022-01-02 22:32:42.716 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"success":true}
+2022-01-02 22:32:42.716 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：8 ms -------------
+2022-01-02 22:32:42.735 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:32:42.735 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/List GET
+2022-01-02 22:32:42.735 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.list
+2022-01-02 22:32:42.735 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:32:42.735 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"page":1,"size":4}]
+2022-01-02 22:32:42.736 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-01-02 22:32:42.737 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 22:32:42.738 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2022-01-02 22:32:42.738 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 7
+2022-01-02 22:32:42.738 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2022-01-02 22:32:42.738 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2022-01-02 22:32:42.739 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 4(Integer)
+2022-01-02 22:32:42.740 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-01-02 22:32:42.740 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, 11, 3, 零基础入门 Java开发，企业级应用开发最佳首选框架, /image/cover1.png, 4, 5, 6
+2022-01-02 22:32:42.740 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 1, 2, 零基础入门 Vue开发，企业级应用开发最佳首选框架, /image/cover2.png, 34, 23, 5
+2022-01-02 22:32:42.740 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, 100, 101, 零基础入门 Python开发，企业级应用开发最佳首选框架, null, null, null, null
+2022-01-02 22:32:42.740 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 4, Oracle 入门教程, 2, 3, null, /image/cover1.png, null, null, null
+2022-01-02 22:32:42.741 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 4
+2022-01-02 22:32:42.741 INFO  com.jiawa.wiki.service.EbookService               :50   [32m                  [0;39m 总行数：7
+2022-01-02 22:32:42.741 INFO  com.jiawa.wiki.service.EbookService               :51   [32m                  [0;39m 总页数：2
+2022-01-02 22:32:42.741 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":11,"category2Id":3,"cover":"/image/cover1.png","description":"零基础入门 Java开发，企业级应用开发最佳首选框架","docCount":4,"id":1,"name":"Spring Boot 入门教程","viewCount":5,"voteCount":6},{"category1Id":1,"category2Id":2,"cover":"/image/cover2.png","description":"零基础入门 Vue开发，企业级应用开发最佳首选框架","docCount":34,"id":2,"name":"Vue 入门教程","viewCount":23,"voteCount":5},{"category1Id":100,"category2Id":101,"description":"零基础入门 Python开发，企业级应用开发最佳首选框架","id":3,"name":"Python 入门教程"},{"category1Id":2,"category2Id":3,"cover":"/image/cover1.png","id":4,"name":"Oracle 入门教程"}],"total":7},"success":true}
+2022-01-02 22:32:42.741 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：6 ms -------------
+2022-01-02 22:33:18.030 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:33:18.030 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/save POST
+2022-01-02 22:33:18.030 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.save
+2022-01-02 22:33:18.030 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:33:18.030 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"category1Id":200,"category2Id":201,"cover":"/image/cover1.png","description":"零基础入门 Java开发，企业级应用开发最佳首选框架","docCount":4,"id":1,"name":"Spring Boot 入门教程","viewCount":5,"voteCount":6}]
+2022-01-02 22:33:18.032 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==>  Preparing: update ebook set `name` = ?, category1_id = ?, category2_id = ?, description = ?, cover = ?, doc_count = ?, view_count = ?, vote_count = ? where id = ?
+2022-01-02 22:33:18.032 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==> Parameters: Spring Boot 入门教程(String), 200(Long), 201(Long), 零基础入门 Java开发，企业级应用开发最佳首选框架(String), /image/cover1.png(String), 4(Integer), 5(Integer), 6(Integer), 1(Long)
+2022-01-02 22:33:18.039 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m <==    Updates: 1
+2022-01-02 22:33:18.039 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"success":true}
+2022-01-02 22:33:18.040 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：10 ms -------------
+2022-01-02 22:33:18.059 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:33:18.059 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/List GET
+2022-01-02 22:33:18.060 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.list
+2022-01-02 22:33:18.060 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:33:18.060 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"page":1,"size":4}]
+2022-01-02 22:33:18.061 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-01-02 22:33:18.061 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 22:33:18.062 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2022-01-02 22:33:18.062 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 7
+2022-01-02 22:33:18.062 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2022-01-02 22:33:18.063 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2022-01-02 22:33:18.063 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 4(Integer)
+2022-01-02 22:33:18.064 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-01-02 22:33:18.064 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, 200, 201, 零基础入门 Java开发，企业级应用开发最佳首选框架, /image/cover1.png, 4, 5, 6
+2022-01-02 22:33:18.064 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 1, 2, 零基础入门 Vue开发，企业级应用开发最佳首选框架, /image/cover2.png, 34, 23, 5
+2022-01-02 22:33:18.065 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, 100, 101, 零基础入门 Python开发，企业级应用开发最佳首选框架, null, null, null, null
+2022-01-02 22:33:18.065 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 4, Oracle 入门教程, 2, 3, null, /image/cover1.png, null, null, null
+2022-01-02 22:33:18.065 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 4
+2022-01-02 22:33:18.065 INFO  com.jiawa.wiki.service.EbookService               :50   [32m                  [0;39m 总行数：7
+2022-01-02 22:33:18.065 INFO  com.jiawa.wiki.service.EbookService               :51   [32m                  [0;39m 总页数：2
+2022-01-02 22:33:18.066 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":200,"category2Id":201,"cover":"/image/cover1.png","description":"零基础入门 Java开发，企业级应用开发最佳首选框架","docCount":4,"id":1,"name":"Spring Boot 入门教程","viewCount":5,"voteCount":6},{"category1Id":1,"category2Id":2,"cover":"/image/cover2.png","description":"零基础入门 Vue开发，企业级应用开发最佳首选框架","docCount":34,"id":2,"name":"Vue 入门教程","viewCount":23,"voteCount":5},{"category1Id":100,"category2Id":101,"description":"零基础入门 Python开发，企业级应用开发最佳首选框架","id":3,"name":"Python 入门教程"},{"category1Id":2,"category2Id":3,"cover":"/image/cover1.png","id":4,"name":"Oracle 入门教程"}],"total":7},"success":true}
+2022-01-02 22:33:18.066 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：7 ms -------------
+2022-01-02 22:33:24.421 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:33:24.422 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/save POST
+2022-01-02 22:33:24.422 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.save
+2022-01-02 22:33:24.422 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:33:24.422 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"category1Id":100,"category2Id":101,"cover":"/image/cover2.png","description":"零基础入门 Vue开发，企业级应用开发最佳首选框架","docCount":34,"id":2,"name":"Vue 入门教程","viewCount":23,"voteCount":5}]
+2022-01-02 22:33:24.423 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==>  Preparing: update ebook set `name` = ?, category1_id = ?, category2_id = ?, description = ?, cover = ?, doc_count = ?, view_count = ?, vote_count = ? where id = ?
+2022-01-02 22:33:24.423 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==> Parameters: Vue 入门教程(String), 100(Long), 101(Long), 零基础入门 Vue开发，企业级应用开发最佳首选框架(String), /image/cover2.png(String), 34(Integer), 23(Integer), 5(Integer), 2(Long)
+2022-01-02 22:33:24.427 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m <==    Updates: 1
+2022-01-02 22:33:24.428 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"success":true}
+2022-01-02 22:33:24.428 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：7 ms -------------
+2022-01-02 22:33:24.451 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:33:24.452 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/List GET
+2022-01-02 22:33:24.452 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.list
+2022-01-02 22:33:24.452 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:33:24.452 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"page":1,"size":4}]
+2022-01-02 22:33:24.455 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-01-02 22:33:24.455 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 22:33:24.456 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2022-01-02 22:33:24.456 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 7
+2022-01-02 22:33:24.456 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2022-01-02 22:33:24.457 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2022-01-02 22:33:24.457 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 4(Integer)
+2022-01-02 22:33:24.458 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-01-02 22:33:24.458 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, 200, 201, 零基础入门 Java开发，企业级应用开发最佳首选框架, /image/cover1.png, 4, 5, 6
+2022-01-02 22:33:24.459 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 100, 101, 零基础入门 Vue开发，企业级应用开发最佳首选框架, /image/cover2.png, 34, 23, 5
+2022-01-02 22:33:24.459 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, 100, 101, 零基础入门 Python开发，企业级应用开发最佳首选框架, null, null, null, null
+2022-01-02 22:33:24.459 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 4, Oracle 入门教程, 2, 3, null, /image/cover1.png, null, null, null
+2022-01-02 22:33:24.459 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 4
+2022-01-02 22:33:24.460 INFO  com.jiawa.wiki.service.EbookService               :50   [32m                  [0;39m 总行数：7
+2022-01-02 22:33:24.460 INFO  com.jiawa.wiki.service.EbookService               :51   [32m                  [0;39m 总页数：2
+2022-01-02 22:33:24.460 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":200,"category2Id":201,"cover":"/image/cover1.png","description":"零基础入门 Java开发，企业级应用开发最佳首选框架","docCount":4,"id":1,"name":"Spring Boot 入门教程","viewCount":5,"voteCount":6},{"category1Id":100,"category2Id":101,"cover":"/image/cover2.png","description":"零基础入门 Vue开发，企业级应用开发最佳首选框架","docCount":34,"id":2,"name":"Vue 入门教程","viewCount":23,"voteCount":5},{"category1Id":100,"category2Id":101,"description":"零基础入门 Python开发，企业级应用开发最佳首选框架","id":3,"name":"Python 入门教程"},{"category1Id":2,"category2Id":3,"cover":"/image/cover1.png","id":4,"name":"Oracle 入门教程"}],"total":7},"success":true}
+2022-01-02 22:33:24.460 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：9 ms -------------
+2022-01-02 22:33:32.501 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:33:32.501 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/save POST
+2022-01-02 22:33:32.501 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.save
+2022-01-02 22:33:32.501 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:33:32.502 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"category1Id":8293835229896960,"description":"零基础入门 Python开发，企业级应用开发最佳首选框架","id":3,"name":"Python 入门教程"}]
+2022-01-02 22:33:32.502 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==>  Preparing: update ebook set `name` = ?, category1_id = ?, category2_id = ?, description = ?, cover = ?, doc_count = ?, view_count = ?, vote_count = ? where id = ?
+2022-01-02 22:33:32.503 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==> Parameters: Python 入门教程(String), 8293835229896960(Long), null, 零基础入门 Python开发，企业级应用开发最佳首选框架(String), null, null, null, null, 3(Long)
+2022-01-02 22:33:32.507 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m <==    Updates: 1
+2022-01-02 22:33:32.508 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"success":true}
+2022-01-02 22:33:32.508 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：7 ms -------------
+2022-01-02 22:33:32.530 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:33:32.530 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/List GET
+2022-01-02 22:33:32.531 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.list
+2022-01-02 22:33:32.531 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:33:32.531 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"page":1,"size":4}]
+2022-01-02 22:33:32.532 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-01-02 22:33:32.533 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 22:33:32.533 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2022-01-02 22:33:32.533 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 7
+2022-01-02 22:33:32.534 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2022-01-02 22:33:32.534 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2022-01-02 22:33:32.534 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 4(Integer)
+2022-01-02 22:33:32.536 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-01-02 22:33:32.536 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, 200, 201, 零基础入门 Java开发，企业级应用开发最佳首选框架, /image/cover1.png, 4, 5, 6
+2022-01-02 22:33:32.536 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 100, 101, 零基础入门 Vue开发，企业级应用开发最佳首选框架, /image/cover2.png, 34, 23, 5
+2022-01-02 22:33:32.537 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, 8293835229896960, null, 零基础入门 Python开发，企业级应用开发最佳首选框架, null, null, null, null
+2022-01-02 22:33:32.537 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 4, Oracle 入门教程, 2, 3, null, /image/cover1.png, null, null, null
+2022-01-02 22:33:32.537 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 4
+2022-01-02 22:33:32.537 INFO  com.jiawa.wiki.service.EbookService               :50   [32m                  [0;39m 总行数：7
+2022-01-02 22:33:32.537 INFO  com.jiawa.wiki.service.EbookService               :51   [32m                  [0;39m 总页数：2
+2022-01-02 22:33:32.538 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":200,"category2Id":201,"cover":"/image/cover1.png","description":"零基础入门 Java开发，企业级应用开发最佳首选框架","docCount":4,"id":1,"name":"Spring Boot 入门教程","viewCount":5,"voteCount":6},{"category1Id":100,"category2Id":101,"cover":"/image/cover2.png","description":"零基础入门 Vue开发，企业级应用开发最佳首选框架","docCount":34,"id":2,"name":"Vue 入门教程","viewCount":23,"voteCount":5},{"category1Id":8293835229896960,"description":"零基础入门 Python开发，企业级应用开发最佳首选框架","id":3,"name":"Python 入门教程"},{"category1Id":2,"category2Id":3,"cover":"/image/cover1.png","id":4,"name":"Oracle 入门教程"}],"total":7},"success":true}
+2022-01-02 22:33:32.538 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：8 ms -------------
+2022-01-02 22:33:38.596 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:33:38.596 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/save POST
+2022-01-02 22:33:38.596 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.save
+2022-01-02 22:33:38.596 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:33:38.596 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"category1Id":8293835229896960,"cover":"/image/cover1.png","id":4,"name":"Oracle 入门教程"}]
+2022-01-02 22:33:38.598 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==>  Preparing: update ebook set `name` = ?, category1_id = ?, category2_id = ?, description = ?, cover = ?, doc_count = ?, view_count = ?, vote_count = ? where id = ?
+2022-01-02 22:33:38.599 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==> Parameters: Oracle 入门教程(String), 8293835229896960(Long), null, null, /image/cover1.png(String), null, null, null, 4(Long)
+2022-01-02 22:33:38.604 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m <==    Updates: 1
+2022-01-02 22:33:38.605 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"success":true}
+2022-01-02 22:33:38.605 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：9 ms -------------
+2022-01-02 22:33:38.624 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:33:38.624 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/List GET
+2022-01-02 22:33:38.624 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.list
+2022-01-02 22:33:38.624 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:33:38.624 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"page":1,"size":4}]
+2022-01-02 22:33:38.625 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-01-02 22:33:38.626 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 22:33:38.627 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2022-01-02 22:33:38.627 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 7
+2022-01-02 22:33:38.627 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2022-01-02 22:33:38.627 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2022-01-02 22:33:38.628 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 4(Integer)
+2022-01-02 22:33:38.630 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-01-02 22:33:38.630 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, 200, 201, 零基础入门 Java开发，企业级应用开发最佳首选框架, /image/cover1.png, 4, 5, 6
+2022-01-02 22:33:38.631 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 100, 101, 零基础入门 Vue开发，企业级应用开发最佳首选框架, /image/cover2.png, 34, 23, 5
+2022-01-02 22:33:38.631 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, 8293835229896960, null, 零基础入门 Python开发，企业级应用开发最佳首选框架, null, null, null, null
+2022-01-02 22:33:38.631 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 4, Oracle 入门教程, 8293835229896960, null, null, /image/cover1.png, null, null, null
+2022-01-02 22:33:38.632 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 4
+2022-01-02 22:33:38.632 INFO  com.jiawa.wiki.service.EbookService               :50   [32m                  [0;39m 总行数：7
+2022-01-02 22:33:38.632 INFO  com.jiawa.wiki.service.EbookService               :51   [32m                  [0;39m 总页数：2
+2022-01-02 22:33:38.634 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":200,"category2Id":201,"cover":"/image/cover1.png","description":"零基础入门 Java开发，企业级应用开发最佳首选框架","docCount":4,"id":1,"name":"Spring Boot 入门教程","viewCount":5,"voteCount":6},{"category1Id":100,"category2Id":101,"cover":"/image/cover2.png","description":"零基础入门 Vue开发，企业级应用开发最佳首选框架","docCount":34,"id":2,"name":"Vue 入门教程","viewCount":23,"voteCount":5},{"category1Id":8293835229896960,"description":"零基础入门 Python开发，企业级应用开发最佳首选框架","id":3,"name":"Python 入门教程"},{"category1Id":8293835229896960,"cover":"/image/cover1.png","id":4,"name":"Oracle 入门教程"}],"total":7},"success":true}
+2022-01-02 22:33:38.634 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：10 ms -------------
+2022-01-02 22:33:40.133 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:33:40.133 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/List GET
+2022-01-02 22:33:40.134 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.list
+2022-01-02 22:33:40.134 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:33:40.134 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"page":2,"size":4}]
+2022-01-02 22:33:40.135 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-01-02 22:33:40.136 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 22:33:40.136 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2022-01-02 22:33:40.137 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 7
+2022-01-02 22:33:40.137 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2022-01-02 22:33:40.137 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?, ?
+2022-01-02 22:33:40.137 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 4(Long), 4(Integer)
+2022-01-02 22:33:40.138 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-01-02 22:33:40.138 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 5, 雪中悍刀行, 3, 4, 打到收服就可以了, null, null, null, null
+2022-01-02 22:33:40.138 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 6, 剑来, 12, 1, null, null, null, null, null
+2022-01-02 22:33:40.138 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 8227331779338496, 斗罗大陆·绝世唐门, 12, 23, null, null, null, null, null
+2022-01-02 22:33:40.138 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 3
+2022-01-02 22:33:40.139 INFO  com.jiawa.wiki.service.EbookService               :50   [32m                  [0;39m 总行数：7
+2022-01-02 22:33:40.139 INFO  com.jiawa.wiki.service.EbookService               :51   [32m                  [0;39m 总页数：2
+2022-01-02 22:33:40.139 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":3,"category2Id":4,"description":"打到收服就可以了","id":5,"name":"雪中悍刀行"},{"category1Id":12,"category2Id":1,"id":6,"name":"剑来"},{"category1Id":12,"category2Id":23,"id":8227331779338496,"name":"斗罗大陆·绝世唐门"}],"total":7},"success":true}
+2022-01-02 22:33:40.139 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：6 ms -------------
+2022-01-02 22:33:45.717 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:33:45.717 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/save POST
+2022-01-02 22:33:45.717 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.save
+2022-01-02 22:33:45.718 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:33:45.718 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"category1Id":8252231940841728,"description":"打到收服就可以了","id":5,"name":"雪中悍刀行"}]
+2022-01-02 22:33:45.719 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==>  Preparing: update ebook set `name` = ?, category1_id = ?, category2_id = ?, description = ?, cover = ?, doc_count = ?, view_count = ?, vote_count = ? where id = ?
+2022-01-02 22:33:45.719 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==> Parameters: 雪中悍刀行(String), 8252231940841728(Long), null, 打到收服就可以了(String), null, null, null, null, 5(Long)
+2022-01-02 22:33:45.724 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m <==    Updates: 1
+2022-01-02 22:33:45.725 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"success":true}
+2022-01-02 22:33:45.725 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：8 ms -------------
+2022-01-02 22:33:45.742 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:33:45.742 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/List GET
+2022-01-02 22:33:45.742 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.list
+2022-01-02 22:33:45.742 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:33:45.742 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"page":2,"size":4}]
+2022-01-02 22:33:45.743 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-01-02 22:33:45.744 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 22:33:45.745 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2022-01-02 22:33:45.745 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 7
+2022-01-02 22:33:45.745 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2022-01-02 22:33:45.746 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?, ?
+2022-01-02 22:33:45.747 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 4(Long), 4(Integer)
+2022-01-02 22:33:45.748 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-01-02 22:33:45.748 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 5, 雪中悍刀行, 8252231940841728, null, 打到收服就可以了, null, null, null, null
+2022-01-02 22:33:45.749 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 6, 剑来, 12, 1, null, null, null, null, null
+2022-01-02 22:33:45.749 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 8227331779338496, 斗罗大陆·绝世唐门, 12, 23, null, null, null, null, null
+2022-01-02 22:33:45.749 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 3
+2022-01-02 22:33:45.749 INFO  com.jiawa.wiki.service.EbookService               :50   [32m                  [0;39m 总行数：7
+2022-01-02 22:33:45.750 INFO  com.jiawa.wiki.service.EbookService               :51   [32m                  [0;39m 总页数：2
+2022-01-02 22:33:45.750 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":8252231940841728,"description":"打到收服就可以了","id":5,"name":"雪中悍刀行"},{"category1Id":12,"category2Id":1,"id":6,"name":"剑来"},{"category1Id":12,"category2Id":23,"id":8227331779338496,"name":"斗罗大陆·绝世唐门"}],"total":7},"success":true}
+2022-01-02 22:33:45.750 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：8 ms -------------
+2022-01-02 22:33:49.076 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:33:49.076 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/save POST
+2022-01-02 22:33:49.076 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.save
+2022-01-02 22:33:49.076 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:33:49.076 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"category1Id":8252231940841728,"id":6,"name":"剑来"}]
+2022-01-02 22:33:49.077 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==>  Preparing: update ebook set `name` = ?, category1_id = ?, category2_id = ?, description = ?, cover = ?, doc_count = ?, view_count = ?, vote_count = ? where id = ?
+2022-01-02 22:33:49.078 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==> Parameters: 剑来(String), 8252231940841728(Long), null, null, null, null, null, null, 6(Long)
+2022-01-02 22:33:49.082 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m <==    Updates: 1
+2022-01-02 22:33:49.082 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"success":true}
+2022-01-02 22:33:49.082 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：6 ms -------------
+2022-01-02 22:33:49.100 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:33:49.100 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/List GET
+2022-01-02 22:33:49.100 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.list
+2022-01-02 22:33:49.100 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:33:49.100 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"page":2,"size":4}]
+2022-01-02 22:33:49.101 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-01-02 22:33:49.102 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 22:33:49.103 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2022-01-02 22:33:49.103 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 7
+2022-01-02 22:33:49.103 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2022-01-02 22:33:49.103 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?, ?
+2022-01-02 22:33:49.104 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 4(Long), 4(Integer)
+2022-01-02 22:33:49.105 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-01-02 22:33:49.105 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 5, 雪中悍刀行, 8252231940841728, null, 打到收服就可以了, null, null, null, null
+2022-01-02 22:33:49.105 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 6, 剑来, 8252231940841728, null, null, null, null, null, null
+2022-01-02 22:33:49.105 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 8227331779338496, 斗罗大陆·绝世唐门, 12, 23, null, null, null, null, null
+2022-01-02 22:33:49.106 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 3
+2022-01-02 22:33:49.106 INFO  com.jiawa.wiki.service.EbookService               :50   [32m                  [0;39m 总行数：7
+2022-01-02 22:33:49.106 INFO  com.jiawa.wiki.service.EbookService               :51   [32m                  [0;39m 总页数：2
+2022-01-02 22:33:49.106 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":8252231940841728,"description":"打到收服就可以了","id":5,"name":"雪中悍刀行"},{"category1Id":8252231940841728,"id":6,"name":"剑来"},{"category1Id":12,"category2Id":23,"id":8227331779338496,"name":"斗罗大陆·绝世唐门"}],"total":7},"success":true}
+2022-01-02 22:33:49.106 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：6 ms -------------
+2022-01-02 22:33:52.924 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:33:52.925 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/save POST
+2022-01-02 22:33:52.925 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.save
+2022-01-02 22:33:52.925 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:33:52.926 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"category1Id":12,"category2Id":23,"id":8227331779338496,"name":"斗罗大陆·绝世唐门"}]
+2022-01-02 22:33:52.926 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==>  Preparing: update ebook set `name` = ?, category1_id = ?, category2_id = ?, description = ?, cover = ?, doc_count = ?, view_count = ?, vote_count = ? where id = ?
+2022-01-02 22:33:52.927 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==> Parameters: 斗罗大陆·绝世唐门(String), 12(Long), 23(Long), null, null, null, null, null, 8227331779338496(Long)
+2022-01-02 22:33:52.928 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m <==    Updates: 1
+2022-01-02 22:33:52.928 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"success":true}
+2022-01-02 22:33:52.928 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：4 ms -------------
+2022-01-02 22:33:52.945 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:33:52.945 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/List GET
+2022-01-02 22:33:52.945 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.list
+2022-01-02 22:33:52.945 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:33:52.945 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"page":2,"size":4}]
+2022-01-02 22:33:52.947 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-01-02 22:33:52.947 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 22:33:52.948 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2022-01-02 22:33:52.949 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 7
+2022-01-02 22:33:52.949 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2022-01-02 22:33:52.949 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?, ?
+2022-01-02 22:33:52.949 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 4(Long), 4(Integer)
+2022-01-02 22:33:52.950 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-01-02 22:33:52.951 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 5, 雪中悍刀行, 8252231940841728, null, 打到收服就可以了, null, null, null, null
+2022-01-02 22:33:52.951 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 6, 剑来, 8252231940841728, null, null, null, null, null, null
+2022-01-02 22:33:52.951 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 8227331779338496, 斗罗大陆·绝世唐门, 12, 23, null, null, null, null, null
+2022-01-02 22:33:52.952 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 3
+2022-01-02 22:33:52.952 INFO  com.jiawa.wiki.service.EbookService               :50   [32m                  [0;39m 总行数：7
+2022-01-02 22:33:52.952 INFO  com.jiawa.wiki.service.EbookService               :51   [32m                  [0;39m 总页数：2
+2022-01-02 22:33:52.953 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":8252231940841728,"description":"打到收服就可以了","id":5,"name":"雪中悍刀行"},{"category1Id":8252231940841728,"id":6,"name":"剑来"},{"category1Id":12,"category2Id":23,"id":8227331779338496,"name":"斗罗大陆·绝世唐门"}],"total":7},"success":true}
+2022-01-02 22:33:52.953 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：8 ms -------------
+2022-01-02 22:33:57.110 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:33:57.111 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/save POST
+2022-01-02 22:33:57.111 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.save
+2022-01-02 22:33:57.111 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:33:57.111 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"category1Id":8252231940841728,"id":8227331779338496,"name":"斗罗大陆·绝世唐门"}]
+2022-01-02 22:33:57.113 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==>  Preparing: update ebook set `name` = ?, category1_id = ?, category2_id = ?, description = ?, cover = ?, doc_count = ?, view_count = ?, vote_count = ? where id = ?
+2022-01-02 22:33:57.117 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m ==> Parameters: 斗罗大陆·绝世唐门(String), 8252231940841728(Long), null, null, null, null, null, null, 8227331779338496(Long)
+2022-01-02 22:33:57.122 DEBUG c.jiawa.wiki.mapper.EbookMapper.updateByPrimaryKey:137  [32m                  [0;39m <==    Updates: 1
+2022-01-02 22:33:57.123 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"success":true}
+2022-01-02 22:33:57.123 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：13 ms -------------
+2022-01-02 22:33:57.139 INFO  com.jiawa.wiki.aspect.LogAspect                   :46   [32m                  [0;39m ------------- 开始 -------------
+2022-01-02 22:33:57.140 INFO  com.jiawa.wiki.aspect.LogAspect                   :47   [32m                  [0;39m 请求地址: http://localhost:8085/ebook/List GET
+2022-01-02 22:33:57.140 INFO  com.jiawa.wiki.aspect.LogAspect                   :48   [32m                  [0;39m 类名方法: com.jiawa.wiki.controller.EbookController.list
+2022-01-02 22:33:57.140 INFO  com.jiawa.wiki.aspect.LogAspect                   :49   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2022-01-02 22:33:57.140 INFO  com.jiawa.wiki.aspect.LogAspect                   :69   [32m                  [0;39m 请求参数: [{"page":2,"size":4}]
+2022-01-02 22:33:57.141 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-01-02 22:33:57.142 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2022-01-02 22:33:57.143 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2022-01-02 22:33:57.143 TRACE c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 7
+2022-01-02 22:33:57.144 DEBUG c.j.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2022-01-02 22:33:57.145 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?, ?
+2022-01-02 22:33:57.145 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 4(Long), 4(Integer)
+2022-01-02 22:33:57.146 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-01-02 22:33:57.146 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 5, 雪中悍刀行, 8252231940841728, null, 打到收服就可以了, null, null, null, null
+2022-01-02 22:33:57.147 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 6, 剑来, 8252231940841728, null, null, null, null, null, null
+2022-01-02 22:33:57.147 TRACE com.jiawa.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 8227331779338496, 斗罗大陆·绝世唐门, 8252231940841728, null, null, null, null, null, null
+2022-01-02 22:33:57.147 DEBUG com.jiawa.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 3
+2022-01-02 22:33:57.147 INFO  com.jiawa.wiki.service.EbookService               :50   [32m                  [0;39m 总行数：7
+2022-01-02 22:33:57.147 INFO  com.jiawa.wiki.service.EbookService               :51   [32m                  [0;39m 总页数：2
+2022-01-02 22:33:57.148 INFO  com.jiawa.wiki.aspect.LogAspect                   :81   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":8252231940841728,"description":"打到收服就可以了","id":5,"name":"雪中悍刀行"},{"category1Id":8252231940841728,"id":6,"name":"剑来"},{"category1Id":8252231940841728,"id":8227331779338496,"name":"斗罗大陆·绝世唐门"}],"total":7},"success":true}
+2022-01-02 22:33:57.148 INFO  com.jiawa.wiki.aspect.LogAspect                   :82   [32m                  [0;39m ------------- 结束 耗时：9 ms -------------
